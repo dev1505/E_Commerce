@@ -1,0 +1,417 @@
+[
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "iPhone 14 Pro Max",
+        "oldPrice": 1299,
+        "price": 1199,
+        "discountedPrice": 1099,
+        "description": "Apple's most advanced smartphone with A16 chip and ProMotion display.",
+        "brand": "Apple",
+        "type": "smartphone",
+        "stock": 25,
+        "model": "A2894",
+        "warranty": "1 year",
+        "features": [
+            "6.7-inch OLED",
+            "Triple-camera",
+            "Face ID",
+            "5G"
+        ],
+        "image": "https://images.pexels.com/photos/5082587/pexels-photo-5082587.jpeg",
+        "rating": 4.8
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Samsung Galaxy S23 Ultra",
+        "oldPrice": 1199,
+        "price": 1099,
+        "discountedPrice": 999,
+        "description": "Flagship Samsung phone with 200MP camera and Snapdragon 8 Gen 2 chip.",
+        "brand": "Samsung",
+        "type": "smartphone",
+        "stock": 30,
+        "model": "SM-S918B",
+        "warranty": "1 year",
+        "features": [
+            "6.8-inch AMOLED",
+            "200MP Camera",
+            "S Pen",
+            "5G"
+        ],
+        "image": "https://images.pexels.com/photos/4042805/pexels-photo-4042805.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "MacBook Air M2",
+        "oldPrice": 1099,
+        "price": 999,
+        "discountedPrice": 949,
+        "description": "Lightweight, powerful laptop with Apple's M2 chip and Retina display.",
+        "brand": "Apple",
+        "type": "laptop",
+        "stock": 40,
+        "model": "Z15T",
+        "warranty": "1 year",
+        "features": [
+            "M2 Chip",
+            "13.6-inch Retina",
+            "MagSafe",
+            "Fanless"
+        ],
+        "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+        "rating": 4.9
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Dell XPS 13",
+        "oldPrice": 1299,
+        "price": 1149,
+        "discountedPrice": 1099,
+        "description": "Ultra-portable Windows laptop with InfinityEdge display and Intel i7 processor.",
+        "brand": "Dell",
+        "type": "laptop",
+        "stock": 15,
+        "model": "XPS9315",
+        "warranty": "1 year",
+        "features": [
+            "13.4-inch Display",
+            "Intel Core i7",
+            "16GB RAM",
+            "SSD"
+        ],
+        "image": "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Apple Watch Series 9",
+        "oldPrice": 499,
+        "price": 449,
+        "discountedPrice": 429,
+        "description": "Advanced health and fitness tracking with always-on Retina display.",
+        "brand": "Apple",
+        "type": "smartwatch",
+        "stock": 60,
+        "model": "S9",
+        "warranty": "1 year",
+        "features": [
+            "Heart Monitor",
+            "ECG",
+            "Sleep Tracking",
+            "Waterproof"
+        ],
+        "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg",
+        "rating": 4.8
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Samsung Galaxy Tab S9",
+        "oldPrice": 899,
+        "price": 799,
+        "discountedPrice": 749,
+        "description": "High-end Android tablet with AMOLED display and S Pen support.",
+        "brand": "Samsung",
+        "type": "tablet",
+        "stock": 35,
+        "model": "SM-X710",
+        "warranty": "1 year",
+        "features": [
+            "11-inch AMOLED",
+            "Snapdragon 8 Gen 2",
+            "S Pen",
+            "DeX"
+        ],
+        "image": "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Google Pixel 8",
+        "oldPrice": 799,
+        "price": 699,
+        "discountedPrice": 659,
+        "description": "Clean Android experience with powerful camera and Google Tensor chip.",
+        "brand": "Google",
+        "type": "smartphone",
+        "stock": 28,
+        "model": "GA04834-US",
+        "warranty": "1 year",
+        "features": [
+            "Tensor G3",
+            "Android 14",
+            "Face Unlock",
+            "OLED"
+        ],
+        "image": "https://images.pexels.com/photos/6078121/pexels-photo-6078121.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Garmin Fenix 7",
+        "oldPrice": 699,
+        "price": 649,
+        "discountedPrice": 599,
+        "description": "Rugged multisport smartwatch with GPS, HR monitor, and solar charging.",
+        "brand": "Garmin",
+        "type": "smartwatch",
+        "stock": 20,
+        "model": "Fenix 7X",
+        "warranty": "2 years",
+        "features": [
+            "GPS",
+            "Solar Charging",
+            "Heart Rate",
+            "Altimeter"
+        ],
+        "image": "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "HP Spectre x360",
+        "oldPrice": 1399,
+        "price": 1249,
+        "discountedPrice": 1199,
+        "description": "Premium 2-in-1 laptop with touchscreen and 360-degree hinge.",
+        "brand": "HP",
+        "type": "laptop",
+        "stock": 18,
+        "model": "14-ef2010nr",
+        "warranty": "1 year",
+        "features": [
+            "Convertible",
+            "OLED Touch",
+            "Intel i7",
+            "Stylus Support"
+        ],
+        "image": "https://images.pexels.com/photos/163139/pexels-photo-163139.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Sony WH-1000XM5",
+        "oldPrice": 399,
+        "price": 349,
+        "discountedPrice": 329,
+        "description": "Industry-leading noise-canceling wireless headphones with 30-hour battery life.",
+        "brand": "Sony",
+        "type": "headphones",
+        "stock": 45,
+        "model": "WH-1000XM5",
+        "warranty": "1 year",
+        "features": [
+            "ANC",
+            "Bluetooth",
+            "Touch Controls",
+            "Voice Assistant"
+        ],
+        "image": "https://images.pexels.com/photos/3761260/pexels-photo-3761260.jpeg",
+        "rating": 4.9
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "iPad Air (5th Gen)",
+        "oldPrice": 749,
+        "price": 699,
+        "discountedPrice": 659,
+        "description": "Light and powerful iPad with M1 chip, Touch ID, and Apple Pencil support.",
+        "brand": "Apple",
+        "type": "tablet",
+        "stock": 32,
+        "model": "A2588",
+        "warranty": "1 year",
+        "features": [
+            "M1 Chip",
+            "10.9-inch Display",
+            "USB-C",
+            "Wi-Fi 6"
+        ],
+        "image": "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Anker 20W USB-C Charger",
+        "oldPrice": 25,
+        "price": 20,
+        "discountedPrice": 18,
+        "description": "Fast-charging wall adapter compatible with iPhone, Android, and USB-C devices.",
+        "brand": "Anker",
+        "type": "accessory",
+        "stock": 200,
+        "model": "A2637",
+        "warranty": "18 months",
+        "features": [
+            "20W Output",
+            "Compact",
+            "USB-C",
+            "Safe Charging"
+        ],
+        "image": "https://images.pexels.com/photos/5864148/pexels-photo-5864148.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Bose SoundLink Flex",
+        "oldPrice": 179,
+        "price": 159,
+        "discountedPrice": 149,
+        "description": "Portable waterproof Bluetooth speaker with bold sound and deep bass.",
+        "brand": "Bose",
+        "type": "speaker",
+        "stock": 70,
+        "model": "SL-FLEX",
+        "warranty": "1 year",
+        "features": [
+            "Waterproof",
+            "Bluetooth",
+            "12hr Battery",
+            "Built-in Mic"
+        ],
+        "image": "https://images.pexels.com/photos/4498216/pexels-photo-4498216.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "LG UltraFine 5K",
+        "oldPrice": 1399,
+        "price": 1299,
+        "discountedPrice": 1199,
+        "description": "High-resolution monitor designed for Mac users with Thunderbolt 3 support.",
+        "brand": "LG",
+        "type": "monitor",
+        "stock": 12,
+        "model": "27MD5KL-B",
+        "warranty": "3 years",
+        "features": [
+            "5K Resolution",
+            "Thunderbolt 3",
+            "Wide Color Gamut"
+        ],
+        "image": "https://images.pexels.com/photos/4792738/pexels-photo-4792738.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Canon EOS R50",
+        "oldPrice": 999,
+        "price": 899,
+        "discountedPrice": 849,
+        "description": "Compact mirrorless camera with 4K video and Dual Pixel AF.",
+        "brand": "Canon",
+        "type": "camera",
+        "stock": 22,
+        "model": "EOSR50",
+        "warranty": "2 years",
+        "features": [
+            "24MP",
+            "4K60 Video",
+            "Dual Pixel AF",
+            "Wi-Fi"
+        ],
+        "image": "https://images.pexels.com/photos/821749/pexels-photo-821749.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6-home",
+        "title": "Amazon Echo Dot (5th Gen)",
+        "oldPrice": 59,
+        "price": 49,
+        "discountedPrice": 39,
+        "description": "Smart speaker with Alexa and improved audio quality for any room.",
+        "brand": "Amazon",
+        "type": "smart speaker",
+        "stock": 100,
+        "model": "C2N6L4",
+        "warranty": "1 year",
+        "features": [
+            "Alexa",
+            "Bluetooth",
+            "Compact",
+            "Voice Control"
+        ],
+        "image": "https://images.pexels.com/photos/6726304/pexels-photo-6726304.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "OnePlus 11",
+        "oldPrice": 749,
+        "price": 699,
+        "discountedPrice": 649,
+        "description": "Flagship-level Android phone with Snapdragon 8 Gen 2 and fast charging.",
+        "brand": "OnePlus",
+        "type": "smartphone",
+        "stock": 50,
+        "model": "PHB110",
+        "warranty": "1 year",
+        "features": [
+            "120Hz AMOLED",
+            "Fast Charging",
+            "Hasselblad Camera"
+        ],
+        "image": "https://images.pexels.com/photos/6078121/pexels-photo-6078121.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "JBL Flip 6",
+        "oldPrice": 129,
+        "price": 109,
+        "discountedPrice": 99,
+        "description": "Portable Bluetooth speaker with powerful bass and waterproof design.",
+        "brand": "JBL",
+        "type": "speaker",
+        "stock": 80,
+        "model": "FLIP6",
+        "warranty": "1 year",
+        "features": [
+            "Waterproof",
+            "Bluetooth 5.1",
+            "12h Battery"
+        ],
+        "image": "https://images.pexels.com/photos/3761260/pexels-photo-3761260.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Sony PlayStation 5",
+        "oldPrice": 599,
+        "price": 549,
+        "discountedPrice": 499,
+        "description": "Next-gen gaming console with ultra-fast SSD and 4K gaming.",
+        "brand": "Sony",
+        "type": "gaming console",
+        "stock": 15,
+        "model": "CFI-1215A01X",
+        "warranty": "1 year",
+        "features": [
+            "4K Gaming",
+            "DualSense",
+            "Ray Tracing"
+        ],
+        "image": "https://images.pexels.com/photos/8454132/pexels-photo-8454132.jpeg",
+        "rating": 4.9
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc6",
+        "title": "Xbox Series X",
+        "oldPrice": 599,
+        "price": 549,
+        "discountedPrice": 499,
+        "description": "Microsoft’s most powerful console with 12 teraflops of processing power.",
+        "brand": "Microsoft",
+        "type": "gaming console",
+        "stock": 18,
+        "model": "RRT-00001",
+        "warranty": "1 year",
+        "features": [
+            "4K Gaming",
+            "Game Pass",
+            "Quick Resume"
+        ],
+        "image": "https://images.pexels.com/photos/8454132/pexels-photo-8454132.jpeg",
+        "rating": 4.8
+    }
+]

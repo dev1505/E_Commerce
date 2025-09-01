@@ -1,0 +1,390 @@
+[
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Long Sleeve Jacket",
+        "oldPrice": 200,
+        "price": 150,
+        "discountedPrice": 135,
+        "description": "A stylish long sleeve jacket perfect for layering during cooler days. Crafted with soft fabric and designed for a comfortable fit.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 50,
+        "brand": "FashionTrend",
+        "size": [
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "rating": 4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Classic Denim Jacket",
+        "oldPrice": 180,
+        "price": 130,
+        "discountedPrice": 120,
+        "description": "Timeless denim jacket with a relaxed fit, perfect for casual outings and layering over any outfit.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 40,
+        "brand": "DenimCo",
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Lightweight Windbreaker",
+        "oldPrice": 120,
+        "price": 90,
+        "discountedPrice": 80,
+        "description": "Stay protected from the wind with this lightweight windbreaker, featuring breathable material and a modern cut.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 70,
+        "brand": "ActiveWear",
+        "size": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg",
+        "rating": 4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Cozy Wool Coat",
+        "oldPrice": 350,
+        "price": 290,
+        "discountedPrice": 260,
+        "description": "Elegant wool coat that provides warmth and style. Perfect for the chilly seasons and formal occasions.",
+        "gender": "women",
+        "type": "coat",
+        "stock": 30,
+        "brand": "WinterLux",
+        "size": [
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/936071/pexels-photo-936071.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Casual Hoodie",
+        "oldPrice": 80,
+        "price": 60,
+        "discountedPrice": 55,
+        "description": "Soft and comfortable hoodie perfect for lounging or casual wear. Features a front pocket and adjustable hood.",
+        "gender": "women",
+        "type": "hoodie",
+        "stock": 100,
+        "brand": "ComfyClothes",
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/3769743/pexels-photo-3769743.jpeg",
+        "rating": 4.3
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Fitted Leather Jacket",
+        "oldPrice": 400,
+        "price": 350,
+        "discountedPrice": 320,
+        "description": "Premium fitted leather jacket that adds an edgy touch to any outfit. Durable and stylish with metal zipper details.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 20,
+        "brand": "LeatherLux",
+        "size": [
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg",
+        "rating": 4.8
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Quilted Puffer Jacket",
+        "oldPrice": 220,
+        "price": 180,
+        "discountedPrice": 170,
+        "description": "Stay warm with this lightweight quilted puffer jacket. Features insulated padding and a water-resistant finish.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 60,
+        "brand": "OutdoorPro",
+        "size": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/374746/pexels-photo-374746.jpeg",
+        "rating": 4.2
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Stylish Trench Coat",
+        "oldPrice": 300,
+        "price": 250,
+        "discountedPrice": 230,
+        "description": "Classic trench coat with a belted waist and water-resistant fabric, perfect for rainy days and sophisticated looks.",
+        "gender": "women",
+        "type": "coat",
+        "stock": 35,
+        "brand": "ClassicWear",
+        "size": [
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/374622/pexels-photo-374622.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Casual Cardigan",
+        "oldPrice": 90,
+        "price": 70,
+        "discountedPrice": 65,
+        "description": "Soft knit cardigan ideal for layering over casual or office wear. Features a button-down front and relaxed fit.",
+        "gender": "women",
+        "type": "cardigan",
+        "stock": 80,
+        "brand": "KnitCozy",
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
+        "rating": 4.1
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Sleeveless Vest Jacket",
+        "oldPrice": 150,
+        "price": 120,
+        "discountedPrice": 110,
+        "description": "Lightweight sleeveless vest jacket for layering, perfect for transitional weather and active lifestyles.",
+        "gender": "women",
+        "type": "vest",
+        "stock": 45,
+        "brand": "LayerPro",
+        "size": [
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/1704121/pexels-photo-1704121.jpeg",
+        "rating": 4.0
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Boho Printed Kimono",
+        "oldPrice": 120,
+        "price": 95,
+        "discountedPrice": 90,
+        "description": "Flowy bohemian kimono with intricate prints, perfect for casual wear or beach outings.",
+        "gender": "women",
+        "type": "kimono",
+        "stock": 60,
+        "brand": "BohoVibes",
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Oversized Denim Jacket",
+        "oldPrice": 200,
+        "price": 170,
+        "discountedPrice": 160,
+        "description": "Trendy oversized denim jacket with a relaxed fit and distressed details for an edgy look.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 55,
+        "brand": "UrbanDenim",
+        "size": [
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+        "rating": 4.3
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Double-Breasted Wool Coat",
+        "oldPrice": 400,
+        "price": 350,
+        "discountedPrice": 340,
+        "description": "Sophisticated double-breasted wool coat with a tailored fit, perfect for formal and business occasions.",
+        "gender": "women",
+        "type": "coat",
+        "stock": 25,
+        "brand": "Elegance",
+        "size": [
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/936071/pexels-photo-936071.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Hooded Fleece Jacket",
+        "oldPrice": 100,
+        "price": 80,
+        "discountedPrice": 75,
+        "description": "Cozy hooded fleece jacket that keeps you warm and comfortable during cold days.",
+        "gender": "women",
+        "type": "jacket",
+        "stock": 90,
+        "brand": "WarmWear",
+        "size": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/374746/pexels-photo-374746.jpeg",
+        "rating": 4.0
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Soft Knit Sweater",
+        "oldPrice": 110,
+        "price": 85,
+        "discountedPrice": 80,
+        "description": "Soft and warm knit sweater perfect for chilly weather and casual looks.",
+        "gender": "women",
+        "type": "sweater",
+        "stock": 70,
+        "brand": "KnitCozy",
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Rainproof Trench Coat",
+        "oldPrice": 280,
+        "price": 240,
+        "discountedPrice": 230,
+        "description": "Water-resistant trench coat designed to keep you dry in style during rainy days.",
+        "gender": "women",
+        "type": "coat",
+        "stock": 40,
+        "brand": "RainGuard",
+        "size": [
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/374622/pexels-photo-374622.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Soft Jersey T-Shirt",
+        "oldPrice": 50,
+        "price": 35,
+        "discountedPrice": 30,
+        "description": "Comfortable and breathable jersey t-shirt for everyday casual wear.",
+        "gender": "women",
+        "type": "t-shirt",
+        "stock": 120,
+        "brand": "BasicWear",
+        "size": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "image": "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg",
+        "rating": 4.0
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Elegant Blazer",
+        "oldPrice": 220,
+        "price": 180,
+        "discountedPrice": 170,
+        "description": "Sharp and elegant blazer perfect for office wear and formal occasions.",
+        "gender": "women",
+        "type": "blazer",
+        "stock": 50,
+        "brand": "OfficeStyle",
+        "size": [
+            "S",
+            "M",
+            "L"
+        ],
+        "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Cropped Hoodie",
+        "oldPrice": 90,
+        "price": 70,
+        "discountedPrice": 65,
+        "description": "Trendy cropped hoodie made with soft fabric, ideal for casual streetwear looks.",
+        "gender": "women",
+        "type": "hoodie",
+        "stock": 60,
+        "brand": "UrbanTrend",
+        "size": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "image": "https://images.pexels.com/photos/3769743/pexels-photo-3769743.jpeg",
+        "rating": 4.3
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc5",
+        "title": "Soft Cashmere Scarf",
+        "oldPrice": 120,
+        "price": 100,
+        "discountedPrice": 90,
+        "description": "Luxuriously soft cashmere scarf that adds warmth and elegance to any outfit.",
+        "gender": "women",
+        "type": "accessory",
+        "stock": 75,
+        "brand": "LuxuryWear",
+        "size": [
+            "One Size"
+        ],
+        "image": "https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg",
+        "rating": 4.8
+    }
+]

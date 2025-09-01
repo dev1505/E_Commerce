@@ -1,0 +1,438 @@
+[
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Hydrating Face Moisturizer",
+        "oldPrice": 29,
+        "price": 24,
+        "discountedPrice": 20,
+        "description": "Lightweight moisturizer with hyaluronic acid for all skin types.",
+        "brand": "GlowCare",
+        "type": "skincare",
+        "stock": 120,
+        "size": "50ml",
+        "ingredients": [
+            "Hyaluronic Acid",
+            "Vitamin E",
+            "Aloe Vera"
+        ],
+        "features": [
+            "Non-greasy",
+            "Dermatologist tested",
+            "Paraben free"
+        ],
+        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+        "rating": 4.7,
+        "expirationDate": "2026-06-30"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Nourishing Shampoo",
+        "oldPrice": 15,
+        "price": 12,
+        "discountedPrice": 10,
+        "description": "Sulfate-free shampoo with argan oil for shiny, healthy hair.",
+        "brand": "SilkEssence",
+        "type": "haircare",
+        "stock": 150,
+        "size": "300ml",
+        "ingredients": [
+            "Argan Oil",
+            "Keratin",
+            "Vitamin B5"
+        ],
+        "features": [
+            "Sulfate-free",
+            "Color safe",
+            "Moisturizing"
+        ],
+        "image": "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg",
+        "rating": 4.5,
+        "expirationDate": "2025-12-31"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Long-lasting Matte Lipstick",
+        "oldPrice": 19,
+        "price": 16,
+        "discountedPrice": 14,
+        "description": "Velvety matte lipstick with rich pigments and smooth application.",
+        "brand": "VivaCosmetics",
+        "type": "makeup",
+        "stock": 80,
+        "size": "4g",
+        "ingredients": [
+            "Vitamin E",
+            "Beeswax",
+            "Mineral pigments"
+        ],
+        "features": [
+            "Long-lasting",
+            "Non-drying",
+            "Cruelty-free"
+        ],
+        "image": "https://images.pexels.com/photos/3330037/pexels-photo-3330037.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2026-01-31"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Floral Eau de Parfum",
+        "oldPrice": 59,
+        "price": 49,
+        "discountedPrice": 45,
+        "description": "Fresh floral fragrance with notes of jasmine and rose.",
+        "brand": "AromaLux",
+        "type": "fragrance",
+        "stock": 60,
+        "size": "50ml",
+        "features": [
+            "Long-lasting scent",
+            "Alcohol based",
+            "Elegant bottle"
+        ],
+        "image": "https://images.pexels.com/photos/2110475/pexels-photo-2110475.jpeg",
+        "rating": 4.8,
+        "expirationDate": "2027-05-15"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Gentle Facial Cleanser",
+        "oldPrice": 22,
+        "price": 18,
+        "discountedPrice": 15,
+        "description": "Soap-free cleanser that removes impurities without drying skin.",
+        "brand": "PureSkin",
+        "type": "skincare",
+        "stock": 130,
+        "size": "150ml",
+        "ingredients": [
+            "Chamomile",
+            "Glycerin",
+            "Panthenol"
+        ],
+        "features": [
+            "Hypoallergenic",
+            "Non-comedogenic",
+            "Dermatologist approved"
+        ],
+        "image": "https://images.pexels.com/photos/2869876/pexels-photo-2869876.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2025-10-20"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Argan Oil Hair Serum",
+        "oldPrice": 25,
+        "price": 20,
+        "discountedPrice": 18,
+        "description": "Lightweight serum that tames frizz and adds shine.",
+        "brand": "SilkEssence",
+        "type": "haircare",
+        "stock": 100,
+        "size": "50ml",
+        "ingredients": [
+            "Argan Oil",
+            "Vitamin E"
+        ],
+        "features": [
+            "Non-greasy",
+            "Paraben free",
+            "Adds shine"
+        ],
+        "image": "https://images.pexels.com/photos/60504/pexels-photo-60504.jpeg",
+        "rating": 4.7,
+        "expirationDate": "2026-07-15"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Waterproof Mascara",
+        "oldPrice": 21,
+        "price": 18,
+        "discountedPrice": 16,
+        "description": "Volumizing mascara that stays put all day without smudging.",
+        "brand": "VivaCosmetics",
+        "type": "makeup",
+        "stock": 90,
+        "size": "7ml",
+        "ingredients": [
+            "Beeswax",
+            "Vitamin E"
+        ],
+        "features": [
+            "Waterproof",
+            "Smudge-proof",
+            "Easy removal"
+        ],
+        "image": "https://images.pexels.com/photos/330583/pexels-photo-330583.jpeg",
+        "rating": 4.5,
+        "expirationDate": "2025-11-30"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Electric Facial Cleansing Brush",
+        "oldPrice": 79,
+        "price": 69,
+        "discountedPrice": 65,
+        "description": "Rechargeable brush for deep and gentle facial cleansing.",
+        "brand": "SkinTech",
+        "type": "tool",
+        "stock": 40,
+        "features": [
+            "Rechargeable",
+            "Waterproof",
+            "Multiple speeds"
+        ],
+        "image": "https://images.pexels.com/photos/4058299/pexels-photo-4058299.jpeg",
+        "rating": 4.8
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Men’s Aftershave Balm",
+        "oldPrice": 29,
+        "price": 24,
+        "discountedPrice": 22,
+        "description": "Soothing aftershave balm that calms skin and prevents irritation.",
+        "brand": "GentleMan",
+        "type": "aftershave",
+        "stock": 75,
+        "size": "100ml",
+        "ingredients": [
+            "Aloe Vera",
+            "Vitamin E"
+        ],
+        "features": [
+            "Non-greasy",
+            "Quick absorption",
+            "Alcohol-free"
+        ],
+        "image": "https://images.pexels.com/photos/753746/pexels-photo-753746.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2026-03-01"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Vitamin C Serum",
+        "oldPrice": 35,
+        "price": 29,
+        "discountedPrice": 25,
+        "description": "Brightening serum with stabilized vitamin C for radiant skin.",
+        "brand": "GlowCare",
+        "type": "skincare",
+        "stock": 110,
+        "size": "30ml",
+        "ingredients": [
+            "Vitamin C",
+            "Hyaluronic Acid",
+            "Ferulic Acid"
+        ],
+        "features": [
+            "Antioxidant",
+            "Lightweight",
+            "Paraben free"
+        ],
+        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+        "rating": 4.8,
+        "expirationDate": "2026-08-31"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Dry Shampoo",
+        "oldPrice": 18,
+        "price": 15,
+        "discountedPrice": 13,
+        "description": "Refreshing dry shampoo that absorbs oil and adds volume.",
+        "brand": "FreshLocks",
+        "type": "haircare",
+        "stock": 140,
+        "size": "200ml",
+        "features": [
+            "Oil absorption",
+            "Volume booster",
+            "No residue"
+        ],
+        "image": "https://images.pexels.com/photos/1191539/pexels-photo-1191539.jpeg",
+        "rating": 4.4,
+        "expirationDate": "2025-09-30"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Liquid Foundation",
+        "oldPrice": 30,
+        "price": 25,
+        "discountedPrice": 22,
+        "description": "Buildable liquid foundation for a natural matte finish.",
+        "brand": "VivaCosmetics",
+        "type": "makeup",
+        "stock": 100,
+        "size": "30ml",
+        "features": [
+            "Long-lasting",
+            "Non-comedogenic",
+            "SPF 15"
+        ],
+        "image": "https://images.pexels.com/photos/3778602/pexels-photo-3778602.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2026-02-28"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Electric Hair Straightener",
+        "oldPrice": 49,
+        "price": 44,
+        "discountedPrice": 39,
+        "description": "Compact flat iron with ceramic plates for smooth styling.",
+        "brand": "StylePro",
+        "type": "tool",
+        "stock": 55,
+        "features": [
+            "Ceramic plates",
+            "Fast heat-up",
+            "Adjustable temperature"
+        ],
+        "image": "https://images.pexels.com/photos/374713/pexels-photo-374713.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Overnight Repair Cream",
+        "oldPrice": 40,
+        "price": 35,
+        "discountedPrice": 30,
+        "description": "Rich night cream with peptides and antioxidants for skin renewal.",
+        "brand": "PureSkin",
+        "type": "skincare",
+        "stock": 85,
+        "size": "50ml",
+        "features": [
+            "Hydrating",
+            "Anti-aging",
+            "Dermatologist tested"
+        ],
+        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+        "rating": 4.7,
+        "expirationDate": "2026-11-15"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Hair Growth Serum",
+        "oldPrice": 38,
+        "price": 32,
+        "discountedPrice": 29,
+        "description": "Stimulates hair follicles to promote thicker and fuller hair.",
+        "brand": "HairVital",
+        "type": "haircare",
+        "stock": 95,
+        "size": "60ml",
+        "ingredients": [
+            "Biotin",
+            "Caffeine",
+            "Peppermint oil"
+        ],
+        "features": [
+            "Paraben free",
+            "Sulfate free",
+            "Non-greasy"
+        ],
+        "image": "https://images.pexels.com/photos/60504/pexels-photo-60504.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2026-04-30"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Electric Toothbrush",
+        "oldPrice": 59,
+        "price": 52,
+        "discountedPrice": 50,
+        "description": "Rechargeable toothbrush with multiple cleaning modes and timer.",
+        "brand": "SmileBright",
+        "type": "tool",
+        "stock": 60,
+        "features": [
+            "Rechargeable",
+            "Waterproof",
+            "Timer function"
+        ],
+        "image": "https://images.pexels.com/photos/305567/pexels-photo-305567.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Blush Palette",
+        "oldPrice": 28,
+        "price": 24,
+        "discountedPrice": 22,
+        "description": "Palette with 4 shades of blush for a natural flush.",
+        "brand": "VivaCosmetics",
+        "type": "makeup",
+        "stock": 75,
+        "size": "10g",
+        "features": [
+            "Pigmented",
+            "Blendable",
+            "Cruelty-free"
+        ],
+        "image": "https://images.pexels.com/photos/3645365/pexels-photo-3645365.jpeg",
+        "rating": 4.5,
+        "expirationDate": "2026-01-01"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Sunscreen SPF 50",
+        "oldPrice": 25,
+        "price": 22,
+        "discountedPrice": 20,
+        "description": "Broad spectrum sunscreen suitable for all skin types.",
+        "brand": "GlowCare",
+        "type": "skincare",
+        "stock": 140,
+        "size": "100ml",
+        "features": [
+            "Non-greasy",
+            "Water-resistant",
+            "Paraben free"
+        ],
+        "image": "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg",
+        "rating": 4.8,
+        "expirationDate": "2026-07-20"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Body Lotion",
+        "oldPrice": 18,
+        "price": 15,
+        "discountedPrice": 13,
+        "description": "Moisturizing body lotion with shea butter and vitamin E.",
+        "brand": "SoftTouch",
+        "type": "bodycare",
+        "stock": 100,
+        "size": "250ml",
+        "features": [
+            "Hydrating",
+            "Non-greasy",
+            "Fast absorbing"
+        ],
+        "image": "https://images.pexels.com/photos/39584/pexels-photo-39584.jpeg",
+        "rating": 4.6,
+        "expirationDate": "2025-12-31"
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc8",
+        "title": "Unisex Citrus Cologne",
+        "oldPrice": 49,
+        "price": 44,
+        "discountedPrice": 40,
+        "description": "Refreshing citrus fragrance with notes of bergamot and lemon.",
+        "brand": "AromaLux",
+        "type": "fragrance",
+        "stock": 55,
+        "size": "100ml",
+        "features": [
+            "Long-lasting",
+            "Alcohol based",
+            "Elegant bottle"
+        ],
+        "image": "https://images.pexels.com/photos/2110475/pexels-photo-2110475.jpeg",
+        "rating": 4.5,
+        "expirationDate": "2027-03-01"
+    }
+]

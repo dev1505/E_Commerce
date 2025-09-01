@@ -1,0 +1,500 @@
+[
+    {
+        "_id": "68b5483659700e0a6d1b6fca",
+        "desc": "A stylish long sleeve jacket perfect for layering during cooler days. Crafted with soft fabric and designed for a comfortable fit.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33647386/pexels-photo-33647386.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fcb",
+        "desc": "Timeless denim jacket with a relaxed fit, perfect for casual outings and layering over any outfit.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33627054/pexels-photo-33627054.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fcc",
+        "desc": "Stay protected from the wind with this lightweight windbreaker, featuring breathable material and a modern cut.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33679114/pexels-photo-33679114.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fcd",
+        "desc": "Elegant wool coat that provides warmth and style. Perfect for the chilly seasons and formal occasions.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/792325/pexels-photo-792325.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fce",
+        "desc": "Soft and comfortable hoodie perfect for lounging or casual wear. Features a front pocket and adjustable hood.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1035692/pexels-photo-1035692.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fcf",
+        "desc": "Premium fitted leather jacket that adds an edgy touch to any outfit. Durable and stylish with metal zipper details.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1035692/pexels-photo-1035692.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd0",
+        "desc": "Stay warm with this lightweight quilted puffer jacket. Features insulated padding and a water-resistant finish.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1035692/pexels-photo-1035692.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd1",
+        "desc": "Classic trench coat with a belted waist and water-resistant fabric, perfect for rainy days and sophisticated looks.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/847414/pexels-photo-847414.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd2",
+        "desc": "Soft knit cardigan ideal for layering over casual or office wear. Features a button-down front and relaxed fit.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33657181/pexels-photo-33657181.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd3",
+        "desc": "Lightweight sleeveless vest jacket for layering, perfect for transitional weather and active lifestyles.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33678016/pexels-photo-33678016.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd4",
+        "desc": "Flowy bohemian kimono with intricate prints, perfect for casual wear or beach outings.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/4728019/pexels-photo-4728019.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd5",
+        "desc": "Trendy oversized denim jacket with a relaxed fit and distressed details for an edgy look.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33627142/pexels-photo-33627142.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd6",
+        "desc": "Sophisticated double-breasted wool coat with a tailored fit, perfect for formal and business occasions.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/3538028/pexels-photo-3538028.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd7",
+        "desc": "Cozy hooded fleece jacket that keeps you warm and comfortable during cold days.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/33627097/pexels-photo-33627097.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd8",
+        "desc": "Soft and warm knit sweater perfect for chilly weather and casual looks.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/5493786/pexels-photo-5493786.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fd9",
+        "desc": "Water-resistant trench coat designed to keep you dry in style during rainy days.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1381556/pexels-photo-1381556.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fda",
+        "desc": "Comfortable and breathable jersey t-shirt for everyday casual wear.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1188748/pexels-photo-1188748.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fdb",
+        "desc": "Sharp and elegant blazer perfect for office wear and formal occasions.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/975657/pexels-photo-975657.jpeghttps://images.pexels.com/photos/1739580/pexels-photo-1739580.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fdc",
+        "desc": "Trendy cropped hoodie made with soft fabric, ideal for casual streetwear looks.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/1739580/pexels-photo-1739580.jpeg"
+    },
+    {
+        "_id": "68b5483659700e0a6d1b6fdd",
+        "desc": "Luxuriously soft cashmere scarf that adds warmth and elegance to any outfit.",
+        "gender": "women",
+        "image": "https://images.pexels.com/photos/3748399/pexels-photo-3748399.jpeg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b703f",
+        "desc": "Apple's most advanced smartphone with A16 chip and ProMotion display.",
+        "gender": "",
+        "title": "iPhone 14 Pro Max",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR_QNJjCeuv-bMXmT4J_VKKAnfAOKm6rYPSI5N8xNJ76BGNu01D1IRFgvmi3BktKrho6LkNsA9w0v7UO-68gHdA9IPvVJ1Pq33y_BKTCLR4TNxhsFvGurqYn4Y"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7040",
+        "desc": "Flagship Samsung phone with 200MP camera and Snapdragon 8 Gen 2 chip.",
+        "gender": "",
+        "title": "Samsung Galaxy S23 Ultra",
+        "image": "https://images.samsung.com/in/smartphones/galaxy-s23-ultra/buy/product_color_phantom_black.png"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7041",
+        "desc": "Lightweight, powerful laptop with Apple's M2 chip and Retina display.",
+        "gender": "",
+        "title": "MacBook Air M2",
+        "image": "https://i.ytimg.com/vi/HeMIZC2rkMo/maxresdefault.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7042",
+        "desc": "Ultra-portable Windows laptop with InfinityEdge display and Intel i7 processor.",
+        "gender": "",
+        "title": "Dell XPS 13",
+        "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/notebook-xps-9315-nt-blue-gallery-3.psd?fmt=pjpg&pscan=auto&scl=1&wid=4108&hei=2874&qlt=100,1&resMode=sharp2&size=4108,2874&chrss=full&imwidth=5000"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7043",
+        "desc": "Advanced health and fitness tracking with always-on Retina display.",
+        "gender": "",
+        "title": "Apple Watch Series 9",
+        "image": "https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/tile/Apple-Watch-S9-hero-230912.jpg.og.jpg?202508210300"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7044",
+        "desc": "High-end Android tablet with AMOLED display and S Pen support.",
+        "gender": "",
+        "title": "Samsung Galaxy Tab S9",
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/africa_en/2307/gallery/africa-en-galaxy-tab-s9-ultra-5g-x916-sm-x916bzaaafa-537328433?$684_547_PNG$"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7045",
+        "desc": "Clean Android experience with powerful camera and Google Tensor chip.",
+        "gender": "",
+        "title": "Google Pixel 8",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThDBlMr87GGrhwQ7JH9SvgeVRh0QWXzy541g&s"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7046",
+        "desc": "Rugged multisport smartwatch with GPS, HR monitor, and solar charging.",
+        "gender": "",
+        "title": "Garmin Fenix 7",
+        "image": "https://m.media-amazon.com/images/I/61915koDsFL._UF894,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7047",
+        "desc": "Premium 2-in-1 laptop with touchscreen and 360-degree hinge.",
+        "gender": "",
+        "title": "HP Spectre x360",
+        "image": "https://m.media-amazon.com/images/I/81KPk6ZeglL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7048",
+        "desc": "Industry-leading noise-canceling wireless headphones with 30-hour battery life.",
+        "gender": "",
+        "title": "Sony WH-1000XM5",
+        "image": "https://i.ytimg.com/vi/v6EjmbMgv80/maxresdefault.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7049",
+        "desc": "Light and powerful iPad with M1 chip, Touch ID, and Apple Pencil support.",
+        "gender": "",
+        "title": "iPad Air (5th Gen)",
+        "image": "https://m.media-amazon.com/images/I/719Lk3CuLzL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704a",
+        "desc": "Fast-charging wall adapter compatible with iPhone, Android, and USB-C devices.",
+        "gender": "",
+        "title": "Anker 20W USB-C Charger",
+        "image": "https://m.media-amazon.com/images/I/61GzMSU7S2L.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704b",
+        "desc": "Portable waterproof Bluetooth speaker with bold sound and deep bass.",
+        "gender": "",
+        "title": "Bose SoundLink Flex",
+        "image": "https://m.media-amazon.com/images/I/71Fb2hGMBRL.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704c",
+        "desc": "High-resolution monitor designed for Mac users with Thunderbolt 3 support.",
+        "gender": "",
+        "title": "LG UltraFine 5K",
+        "image": "https://www.lg.com/content/dam/channel/wcms/de/images/monitore/27md5kl-b_aeu_eedg_de_c/gallery/dz_01.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704d",
+        "desc": "Compact mirrorless camera with 4K video and Dual Pixel AF.",
+        "gender": "",
+        "title": "Canon EOS R50",
+        "image": "https://m.media-amazon.com/images/I/81LskAU5h1L.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704e",
+        "desc": "Smart speaker with Alexa and improved audio quality for any room.",
+        "gender": "",
+        "title": "Amazon Echo Dot (5th Gen)",
+        "image": "https://m.media-amazon.com/images/I/71jNr0MoZEL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b704f",
+        "desc": "Flagship-level Android phone with Snapdragon 8 Gen 2 and fast charging.",
+        "gender": "",
+        "title": "OnePlus 11",
+        "image": "https://www.oneplus.com/content/dam/oasis/page/2023/global/home/salami-share.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7050",
+        "desc": "Portable Bluetooth speaker with powerful bass and waterproof design.",
+        "gender": "",
+        "title": "JBL Flip 6",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBR8D8wxq5BvNh4iNcpMREqFXFxGYZB_gsug&s"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7051",
+        "desc": "Next-gen gaming console with ultra-fast SSD and 4K gaming.",
+        "gender": "",
+        "title": "Sony PlayStation 5",
+        "image": "https://wallpapers.com/images/featured/ps5-2va2br9eeb2j1tnl.jpg"
+    },
+    {
+        "_id": "68b5579b59700e0a6d1b7052",
+        "desc": "Microsoft’s most powerful console with 12 teraflops of processing power.",
+        "gender": "",
+        "title": "Xbox Series X",
+        "image": "https://wallpapers.com/images/hd/xbox-series-x-halo-infinite-ztoxrrxsklk1hkaz.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7057",
+        "desc": "Stylish fabric sofa with deep cushions and contemporary design.",
+        "gender": "",
+        "title": "Modern 3-Seater Sofa",
+        "image": "https://afday.com/cdn/shop/products/kunming_66.1_square_arm_sofa_7_-6-909187_512x512.jpg?v=1708747760"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7058",
+        "desc": "Elegant round wall mirror with gold metallic frame.",
+        "gender": "",
+        "title": "Decorative Wall Mirror",
+        "image": "https://m.media-amazon.com/images/I/61Ab4WdVxLL._UF894,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7059",
+        "desc": "10-piece non-stick stainless steel cookware for everyday use.",
+        "gender": "",
+        "title": "Stainless Steel Cookware Set",
+        "image": "https://shriandsam.com/cdn/shop/files/COMBO-01.jpg?v=1729339688&width=2048"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705a",
+        "desc": "Vintage-inspired floor lamp with adjustable arm and exposed bulb.",
+        "gender": "",
+        "title": "Industrial Floor Lamp",
+        "image": "https://m.media-amazon.com/images/I/81XkamvUB6L._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705b",
+        "desc": "Minimalist metal bed frame with wooden slats and modern look.",
+        "gender": "",
+        "title": "Queen Size Bed Frame",
+        "image": "https://m.media-amazon.com/images/I/61Od6H8sZzL._UF894,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705c",
+        "desc": "Tall open shelving unit for books and decor with rustic finish.",
+        "gender": "",
+        "title": "5-Tier Bookshelf",
+        "image": "https://m.media-amazon.com/images/I/61TPHUMPPIL.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705d",
+        "desc": "3-piece abstract artwork for living rooms and bedrooms.",
+        "gender": "",
+        "title": "Abstract Canvas Wall Art",
+        "image": "https://img.freepik.com/premium-photo/abstract-gray-art-with-gold-artistic-image-creativity-creative-design-projects-carpets-wallpaper_1203078-328.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705e",
+        "desc": "Healthy cooking with a large-capacity digital air fryer.",
+        "gender": "",
+        "title": "Air Fryer 5L",
+        "image": "https://cdn.shopify.com/s/files/1/0104/9211/7092/files/1st_banner_Platinum_Plus_Airfryer_5L.jpg?v=1728385231"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b705f",
+        "desc": "Ultra-soft 6-piece towel set made from 100% premium cotton.",
+        "gender": "",
+        "title": "Luxury Cotton Bath Towel Set",
+        "image": "https://m.media-amazon.com/images/I/81J3xTLb0cL._UF894,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7060",
+        "desc": "Modern pendant light perfect for dining and kitchen spaces.",
+        "gender": "",
+        "title": "Pendant Ceiling Light",
+        "image": "https://m.media-amazon.com/images/I/711gg5PPzTL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7061",
+        "desc": "Lift-top coffee table with hidden compartment and open shelf.",
+        "gender": "",
+        "title": "Coffee Table with Storage",
+        "image": "https://images.thdstatic.com/productImages/ee23c60f-2958-4eab-a7a7-25d07a45c6a2/svn/brown-computer-desks-hd-5528in-bk-64_600.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7062",
+        "desc": "Fast-boil stainless steel electric kettle with auto shut-off.",
+        "gender": "",
+        "title": "Electric Kettle 1.7L",
+        "image": "https://m.media-amazon.com/images/I/41AVYLA+3BL.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7063",
+        "desc": "3-piece outdoor furniture set with folding chairs and table.",
+        "gender": "",
+        "title": "Patio Bistro Set",
+        "image": "https://m.media-amazon.com/images/I/81kATTvy-zL._UF894,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b558ad59700e0a6d1b7064",
+        "desc": "Ergonomic contour memory foam pillows for better sleep.",
+        "gender": "",
+        "title": "Memory Foam Pillow Set",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/6/UT/SN/PD/153921958/cervical-memory-foam-pillow-500x500.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b707d",
+        "desc": "Lightweight moisturizer with hyaluronic acid for all skin types.",
+        "gender": "",
+        "title": "Hydrating Face Moisturizer",
+        "image": "https://images.unsplash.com/photo-1629732047847-50219e9c5aef?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9pc3R1cml6ZXJ8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b707e",
+        "desc": "Sulfate-free shampoo with argan oil for shiny, healthy hair.",
+        "gender": "",
+        "title": "Nourishing Shampoo",
+        "image": "https://m.media-amazon.com/images/I/611ippIffNL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b707f",
+        "desc": "Velvety matte lipstick with rich pigments and smooth application.",
+        "gender": "",
+        "title": "Long-lasting Matte Lipstick",
+        "image": "https://m.media-amazon.com/images/I/519g7BTfutL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7080",
+        "desc": "Fresh floral fragrance with notes of jasmine and rose.",
+        "gender": "",
+        "title": "Floral Eau de Parfum",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM23eSTNbVbS_9LAG10OUQVJ95yCCGU9chAvpxDB-wYnkuclZQSVP-WBFAVvrU0PhYl3MFZiC2BmaDacraJ5HMZe3hY5UKg3NllcTknmGE924l-2tE2lBQv5nvrjK8ws5Z9nDgKg75RjE_/s1600/DSC09966+%25281%2529.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7081",
+        "desc": "Soap-free cleanser that removes impurities without drying skin.",
+        "gender": "",
+        "title": "Gentle Facial Cleanser",
+        "image": "https://cdn.thewirecutter.com/wp-content/media/2025/05/BEST-FACIAL-CLEANSERS-2048px-7426-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7082",
+        "desc": "Lightweight serum that tames frizz and adds shine.",
+        "gender": "",
+        "title": "Argan Oil Hair Serum",
+        "image": "https://m.media-amazon.com/images/I/71sLWZ+whHL.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7083",
+        "desc": "Volumizing mascara that stays put all day without smudging.",
+        "gender": "",
+        "title": "Waterproof Mascara",
+        "image": "https://m.media-amazon.com/images/I/61+QXuof2oL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7084",
+        "desc": "Rechargeable brush for deep and gentle facial cleansing.",
+        "gender": "",
+        "title": "Electric Facial Cleansing Brush",
+        "image": "https://www.shutterstock.com/image-photo/electric-brush-cleanser-on-wooden-260nw-496619101.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7085",
+        "desc": "Soothing aftershave balm that calms skin and prevents irritation.",
+        "gender": "",
+        "title": "Men’s Aftershave Balm",
+        "image": "https://m.media-amazon.com/images/I/71orevvlShL.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7086",
+        "desc": "Brightening serum with stabilized vitamin C for radiant skin.",
+        "gender": "",
+        "title": "Vitamin C Serum",
+        "image": "https://cdn.thewirecutter.com/wp-content/media/2025/03/BEST-VITAMIN-C-SERUMS-SUB-2048px-2043-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7087",
+        "desc": "Refreshing dry shampoo that absorbs oil and adds volume.",
+        "gender": "",
+        "title": "Dry Shampoo",
+        "image": "https://www.shutterstock.com/image-photo/group-hair-care-products-copy-600nw-2433595911.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7088",
+        "desc": "Buildable liquid foundation for a natural matte finish.",
+        "gender": "",
+        "title": "Liquid Foundation",
+        "image": "https://lh4.googleusercontent.com/proxy/oH3hJYIV0FpdHWA4B7iCxjhCy3aDSgGp5KFik5CVDwiFPEyObCvfFti0VmrejN9Ly9fZD2KmGcdvzp7r6KDyekRDX8tQU-WFIBQWWLNdk6YO1PUxBnzgZJu0xsd0uc0zY0G1OQdYw37qnn8FDYdZ9Q"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7089",
+        "desc": "Compact flat iron with ceramic plates for smooth styling.",
+        "gender": "",
+        "title": "Electric Hair Straightener",
+        "image": "https://lh6.googleusercontent.com/proxy/nJ2EjDxPKFiS1wG-NctRBokBiDiVBw7-xP8wfjAL8l3n4UlKnwjKbu48IZoqK0ssUBNtKnI-lyWNLLax43TDqOWxtUk-X5kysMycHX6CJpwuitYBDoIoc-9fuknIf7OxBoltBOe1zCyuIS3kWw2sdI1h"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708a",
+        "desc": "Rich night cream with peptides and antioxidants for skin renewal.",
+        "gender": "",
+        "title": "Overnight Repair Cream",
+        "image": "https://m.media-amazon.com/images/I/61BgP3q3DiL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708b",
+        "desc": "Stimulates hair follicles to promote thicker and fuller hair.",
+        "gender": "",
+        "title": "Hair Growth Serum",
+        "image": "https://nourishmantra.in/cdn/shop/files/50ml-hair-growth-serum-main-image.jpg?v=1742892937"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708c",
+        "desc": "Rechargeable toothbrush with multiple cleaning modes and timer.",
+        "gender": "",
+        "title": "Electric Toothbrush",
+        "image": "https://images.unsplash.com/photo-1612181819081-950d35f4d826?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxlY3RyaWMlMjB0b290aGJydXNofGVufDB8fDB8fHww"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708d",
+        "desc": "Palette with 4 shades of blush for a natural flush.",
+        "gender": "",
+        "title": "Blush Palette",
+        "image": "https://m.media-amazon.com/images/I/81Ewp7GDtLL.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708e",
+        "desc": "Broad spectrum sunscreen suitable for all skin types.",
+        "gender": "",
+        "title": "Sunscreen SPF 50",
+        "image": "https://lh5.googleusercontent.com/proxy/zQOhECosA9CDOnOs9BdAIM_rH9F5WbNDYkD5_H_cKrDTli3eGr1KCPI7AwZRZpPIZZPCEZXf2HFfRg-I1ygVgApay0TrNMuN4B3Qg_c9DwUn4k5pVFpB4RjuzNJQgX1UuoTLUBhzxMLT"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b708f",
+        "desc": "Moisturizing body lotion with shea butter and vitamin E.",
+        "gender": "",
+        "title": "Body Lotion",
+        "image": "https://m.media-amazon.com/images/I/618BF38FO0L._SL1500_.jpg"
+    },
+    {
+        "_id": "68b55c8559700e0a6d1b7090",
+        "desc": "Refreshing citrus fragrance with notes of bergamot and lemon.",
+        "gender": "",
+        "title": "Unisex Citrus Cologne",
+        "image": "https://m.media-amazon.com/images/I/71UQWE86X3L._UF1000,1000_QL80_.jpg"
+    }
+]

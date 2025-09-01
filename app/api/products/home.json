@@ -1,0 +1,272 @@
+[
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Modern 3-Seater Sofa",
+        "oldPrice": 899,
+        "price": 799,
+        "discountedPrice": 749,
+        "description": "Stylish fabric sofa with deep cushions and contemporary design.",
+        "brand": "UrbanLiving",
+        "type": "sofa",
+        "stock": 10,
+        "material": "Polyester Fabric",
+        "dimensions": "84x35x34 inches",
+        "warranty": "3 years",
+        "features": [
+            "Removable cushions",
+            "Sturdy frame",
+            "Modern design"
+        ],
+        "image": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Decorative Wall Mirror",
+        "oldPrice": 129,
+        "price": 99,
+        "discountedPrice": 89,
+        "description": "Elegant round wall mirror with gold metallic frame.",
+        "brand": "DecoStyle",
+        "type": "mirror",
+        "stock": 30,
+        "material": "Glass, Metal",
+        "dimensions": "24-inch diameter",
+        "features": [
+            "Easy to hang",
+            "Rust-proof",
+            "Elegant design"
+        ],
+        "image": "https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Stainless Steel Cookware Set",
+        "oldPrice": 249,
+        "price": 199,
+        "discountedPrice": 179,
+        "description": "10-piece non-stick stainless steel cookware for everyday use.",
+        "brand": "ChefPro",
+        "type": "cookware",
+        "stock": 40,
+        "material": "Stainless Steel",
+        "features": [
+            "Induction ready",
+            "Dishwasher safe",
+            "Tempered lids"
+        ],
+        "image": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Industrial Floor Lamp",
+        "oldPrice": 189,
+        "price": 149,
+        "discountedPrice": 129,
+        "description": "Vintage-inspired floor lamp with adjustable arm and exposed bulb.",
+        "brand": "BrightSpace",
+        "type": "lamp",
+        "stock": 25,
+        "material": "Metal",
+        "features": [
+            "Adjustable height",
+            "Rustic finish",
+            "E26 bulb compatible"
+        ],
+        "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Queen Size Bed Frame",
+        "oldPrice": 499,
+        "price": 399,
+        "discountedPrice": 369,
+        "description": "Minimalist metal bed frame with wooden slats and modern look.",
+        "brand": "SleepRight",
+        "type": "bed frame",
+        "stock": 18,
+        "material": "Steel, Wood",
+        "dimensions": "80x60x14 inches",
+        "warranty": "5 years",
+        "features": [
+            "Noise-free",
+            "No box spring required",
+            "Easy assembly"
+        ],
+        "image": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg",
+        "rating": 4.7
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "5-Tier Bookshelf",
+        "oldPrice": 199,
+        "price": 149,
+        "discountedPrice": 139,
+        "description": "Tall open shelving unit for books and decor with rustic finish.",
+        "brand": "OakCraft",
+        "type": "shelf",
+        "stock": 22,
+        "material": "MDF, Metal",
+        "dimensions": "72x24x12 inches",
+        "features": [
+            "Easy to assemble",
+            "Industrial style",
+            "Space-saving"
+        ],
+        "image": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Abstract Canvas Wall Art",
+        "oldPrice": 89,
+        "price": 69,
+        "discountedPrice": 59,
+        "description": "3-piece abstract artwork for living rooms and bedrooms.",
+        "brand": "Artify",
+        "type": "wall art",
+        "stock": 50,
+        "material": "Canvas",
+        "features": [
+            "Framed",
+            "Fade-resistant",
+            "Ready to hang"
+        ],
+        "image": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg",
+        "rating": 4.3
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Air Fryer 5L",
+        "oldPrice": 159,
+        "price": 129,
+        "discountedPrice": 119,
+        "description": "Healthy cooking with a large-capacity digital air fryer.",
+        "brand": "KitchenMate",
+        "type": "appliance",
+        "stock": 34,
+        "features": [
+            "Non-stick basket",
+            "Touch screen",
+            "Timer function"
+        ],
+        "image": "https://images.pexels.com/photos/4198007/pexels-photo-4198007.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Luxury Cotton Bath Towel Set",
+        "oldPrice": 69,
+        "price": 59,
+        "discountedPrice": 49,
+        "description": "Ultra-soft 6-piece towel set made from 100% premium cotton.",
+        "brand": "SoftNest",
+        "type": "towels",
+        "stock": 80,
+        "material": "Cotton",
+        "features": [
+            "Highly absorbent",
+            "Machine washable",
+            "Fade-resistant"
+        ],
+        "image": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+        "rating": 4.8
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Pendant Ceiling Light",
+        "oldPrice": 149,
+        "price": 129,
+        "discountedPrice": 119,
+        "description": "Modern pendant light perfect for dining and kitchen spaces.",
+        "brand": "LumoLux",
+        "type": "ceiling light",
+        "stock": 26,
+        "material": "Glass & Metal",
+        "features": [
+            "Height adjustable",
+            "Edison bulbs",
+            "Sleek design"
+        ],
+        "image": "https://images.pexels.com/photos/6585766/pexels-photo-6585766.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Coffee Table with Storage",
+        "oldPrice": 199,
+        "price": 169,
+        "discountedPrice": 159,
+        "description": "Lift-top coffee table with hidden compartment and open shelf.",
+        "brand": "WoodWare",
+        "type": "coffee table",
+        "stock": 20,
+        "material": "Engineered wood",
+        "features": [
+            "Storage space",
+            "Lift top",
+            "Rustic oak finish"
+        ],
+        "image": "https://images.pexels.com/photos/584939/pexels-photo-584939.jpeg",
+        "rating": 4.6
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Electric Kettle 1.7L",
+        "oldPrice": 49,
+        "price": 39,
+        "discountedPrice": 35,
+        "description": "Fast-boil stainless steel electric kettle with auto shut-off.",
+        "brand": "BoilTech",
+        "type": "kettle",
+        "stock": 50,
+        "features": [
+            "BPA-free",
+            "Cordless",
+            "Boil-dry protection"
+        ],
+        "image": "https://images.pexels.com/photos/4198007/pexels-photo-4198007.jpeg",
+        "rating": 4.4
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Patio Bistro Set",
+        "oldPrice": 349,
+        "price": 299,
+        "discountedPrice": 279,
+        "description": "3-piece outdoor furniture set with folding chairs and table.",
+        "brand": "GardenJoy",
+        "type": "outdoor set",
+        "stock": 12,
+        "material": "Powder-coated steel",
+        "features": [
+            "Weather-resistant",
+            "Foldable",
+            "No assembly required"
+        ],
+        "image": "https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg",
+        "rating": 4.5
+    },
+    {
+        "categoryId": "68b547c459700e0a6d1b6fc7",
+        "title": "Memory Foam Pillow Set",
+        "oldPrice": 79,
+        "price": 69,
+        "discountedPrice": 59,
+        "description": "Ergonomic contour memory foam pillows for better sleep.",
+        "brand": "DreamRest",
+        "type": "pillow",
+        "stock": 60,
+        "material": "Memory foam",
+        "features": [
+            "Hypoallergenic",
+            "Washable cover",
+            "Orthopedic support"
+        ],
+        "image": "https://images.pexels.com/photos/6585181/pexels-photo-6585181.jpeg",
+        "rating": 4.7
+    }
+]
