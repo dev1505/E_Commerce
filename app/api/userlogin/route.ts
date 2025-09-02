@@ -1,7 +1,7 @@
 import { users } from "@/app/indexType";
 import clientPromise from "@/lib/mongo";
 import { NextResponse } from "next/server";
-
+import bcrypt from 'bcrypt';
 export async function POST(request: any) {
     return await userLogin(request);
 }
@@ -12,10 +12,11 @@ export async function userLogin(request: any) {
         const { email, password } = body;
 
         const client = await clientPromise;
+
         const db = client.db('E_Commerce');
         const users = db.collection('userData');
 
-        const user = await users.findOne({ email, password });
+        const user = await users.findOne({ email: email });
 
         if (!user) {
             return NextResponse.json({
@@ -24,11 +25,17 @@ export async function userLogin(request: any) {
             }, { status: 401 });
         }
 
-        if (user.isDeleted) {
+        if (user?.isDeleted) {
             return NextResponse.json({
                 message: 'Account is deleted. Contact support to restore it.',
                 success: false,
             }, { status: 403 });
+        }
+
+        const isMatch = await bcrypt.compare(password, user?.password);
+
+        if (!isMatch) {
+            return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
         }
 
         await users.updateOne(

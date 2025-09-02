@@ -1,6 +1,7 @@
 import { users } from '@/app/indexType';
 import clientPromise from '@/lib/mongo'; // or '../../lib/mongo' if no alias set
 import { NextResponse } from 'next/server';
+import bcrypt from 'bcrypt';
 
 export async function POST(request: any) {
     return await addUsers(request);
@@ -34,8 +35,10 @@ export async function addUsers(request: any) {
 
         // Insert new user
 
-        const newUser = { ...body, isDeleted: false, isLoggedIn: false, cartItems: [], history: [], totalAmount: 0 };
-
+        const saltRounds = 10;
+        const password = await bcrypt.hash(body.password, saltRounds);
+        const newUser = { ...body, isDeleted: false, isLoggedIn: false, cartItems: [], history: [], totalAmount: 0, password: password };
+        console.log({ ...body, isDeleted: false, isLoggedIn: false, cartItems: [], history: [], totalAmount: 0, password: password })
         const result = await users.insertOne(newUser);
 
         return NextResponse.json({

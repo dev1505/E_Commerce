@@ -1,5 +1,6 @@
 'use client';
 import axios from "axios";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Home() {
@@ -7,14 +8,13 @@ export default function Home() {
   const [productData, setproductData] = useState({ productName: "", productDes: "", productList: [] })
   async function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const res = await axios.post("/api/products", { productName: productData.productName, productDesc: productData.productDes })
+    const res = await axios.post("/api/userlogin", { email: productData.productName, password: productData.productDes })
     console.log(res.data);
   }
 
   async function handleFetchProducts() {
     const res = await axios.get("/api/products");
     setproductData({ ...productData, productList: res.data.data });
-    // console.log(res.data.data.map((data: any) => { return { _id: data._id, desc: data.description, gender: data?.gender ?? "", title: data.title } }));
   }
 
   return (
@@ -49,6 +49,11 @@ export default function Home() {
             })
           }
         </div>
+        <Link href={"/login"}>
+          <button type="button">
+            Login
+          </button>
+        </Link>
       </div>
     </>
   );

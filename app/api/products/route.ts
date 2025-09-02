@@ -19,7 +19,7 @@ export async function POST(request: any) {
 }
 
 export async function GET(request: any) {
-    await getProducts();
+    return await getProducts();
 }
 
 export async function getProducts() {
