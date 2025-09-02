@@ -2,6 +2,9 @@
 import axios from "axios";
 import Link from "next/link";
 import React, { useState } from "react";
+import Skeleton from "./components/skeleton";
+import Categories from "./components/categories";
+import ProductCard from "./components/productCard";
 
 export default function Home() {
 
@@ -20,7 +23,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <form onSubmit={(e) => handleFormSubmit(e)}>
+        {/* <form onSubmit={(e) => handleFormSubmit(e)}>
           <div>
             Product name - <input type="text" value={productData.productName} onChange={(e) => { setproductData({ ...productData, productName: e.target.value }) }} required />
           </div>
@@ -53,7 +56,8 @@ export default function Home() {
           <button type="button">
             Login
           </button>
-        </Link>
+        </Link> */}
+        <Categories />
       </div>
     </>
   );

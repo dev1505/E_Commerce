@@ -81,3 +81,10 @@ export type users = {
     isDeleted?: boolean;
     isLoggedIn: boolean;
 }
+
+export type category = {
+    categoryName: string;
+    categoryShortName: string;
+    productIds?: []
+    _id?: string
+}

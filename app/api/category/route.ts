@@ -2,7 +2,7 @@ import clientPromise from "@/lib/mongo";
 import { NextResponse } from "next/server";
 
 export async function GET(request: any) {
-    await getCategory();
+    return await getCategory();
 }
 
 export async function getCategory() {
