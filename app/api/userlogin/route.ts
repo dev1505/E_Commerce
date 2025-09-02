@@ -2,6 +2,9 @@ import { users } from "@/app/indexType";
 import clientPromise from "@/lib/mongo";
 import { NextResponse } from "next/server";
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { cookies } from 'next/headers';
+
 export async function POST(request: any) {
     return await userLogin(request);
 }
@@ -44,6 +47,18 @@ export async function userLogin(request: any) {
         );
 
         const { password: _, ...safeUser } = user;
+
+        // Create JWT token
+        const token = jwt.sign({ userName: user?.userName, email: user?.email }, process.env.JWT_SECRET);
+
+        // Set cookie
+        (await cookies()).set('token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'strict',
+            path: '/',
+            maxAge: 60 * 60
+        });
 
         return NextResponse.json({
             message: 'Login successful',

@@ -8,30 +8,59 @@ type Product = fashion | electronics | home | beauty;
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
+  const fetchAndSetProducts = async (pageNum: number) => {
+    try {
+      const res = await axios.post('/api/products/', {
+        page: pageNum,
+        limit: 8,
+        category: "All",
+      });
+
+      setProducts((prev) => (pageNum === 1 ? res.data.data : [...prev, ...res.data.data]));
+      setTotalPages(res.data.totalPages);
+    } catch (error) {
+      console.error('Failed to fetch products:', error);
+    }
+  };
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await axios.post('/api/products', { productList: 20, skip: 0 });
-        setProducts(res.data.data);
-      } catch (error) {
-        console.error('Failed to fetch products:', error);
-      }
-    };
-    fetchProducts();
+    fetchAndSetProducts(1);
+    setPage(1);
   }, []);
 
+  const handleLoadMore = () => {
+    const nextPage = page + 1;
+    if (nextPage <= totalPages) {
+      setPage(nextPage);
+      fetchAndSetProducts(nextPage);
+    }
+  };
+
   return (
-    <div className="px-2 pt-8">
+    <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 lg:grid-cols-4 gap-8">
+
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
-      <div className='m-4 rounded text-center text-2xl p-2 cursor-pointer hover:bg-black hover:text-white duration-150 border border-black'>
-        More...
-      </div>
+
+      {/* Load More */}
+      {page < totalPages && (
+        <div className="text-center mt-8">
+          <button
+            onClick={handleLoadMore}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            More
+          </button>
+        </div>
+      )}
     </div>
   );
 };

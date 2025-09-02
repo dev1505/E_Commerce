@@ -1,15 +1,15 @@
-import React from 'react';
-import Category from './components/Categories';
-import Products from './components/Products';
+import Categories from './components/Categories';
 import Navbar from './components/Navbar';
+import Products from './components/Products';
 
 const HomePage = () => {
+
   return (
-    <main>
+    <>
       <Navbar />
-      <Category />
+      <Categories />
       <Products />
-    </main>
+    </>
   );
 };
 
