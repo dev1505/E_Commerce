@@ -10,7 +10,7 @@ export type fashion = {
     type: string; // e.g., 'jacket', 'coat', etc.
     stock: number;
     brand: string;
-    size: string[]; // e.g., ['S', 'M', 'L']
+    size?: string[]; // e.g., ['S', 'M', 'L']
     image: string;
     rating: number; // typically 0 to 5
 };
@@ -26,7 +26,7 @@ export type electronics = {
     brand: string;
     type: string; // e.g., "smartphone", "laptop", etc.
     stock: number;
-    model: string;
+    model?: string;
     warranty: string; // e.g., "1 year"
     features: string[];
     image: string;
