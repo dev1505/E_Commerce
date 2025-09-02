@@ -6,12 +6,12 @@ import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 
 export async function POST(request: any) {
-    return await userLogin(request);
+    const body: users = await request.json();
+    return await userLogin(body);
 }
 
-export async function userLogin(request: any) {
+export async function userLogin(body: users) {
     try {
-        const body: users = await request.json();
         const { email, password } = body;
 
         const client = await clientPromise;
@@ -25,20 +25,20 @@ export async function userLogin(request: any) {
             return NextResponse.json({
                 message: 'Invalid email or password',
                 success: false,
-            }, { status: 401 });
+            });
         }
 
         if (user?.isDeleted) {
             return NextResponse.json({
                 message: 'Account is deleted. Contact support to restore it.',
                 success: false,
-            }, { status: 403 });
+            });
         }
 
         const isMatch = await bcrypt.compare(password, user?.password);
 
         if (!isMatch) {
-            return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
+            return NextResponse.json({ error: 'Invalid credentials' });
         }
 
         await users.updateOne(

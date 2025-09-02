@@ -4,9 +4,9 @@ import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET!;
 
-export default function Navbar() {
+export default async function Navbar() {
   const cookieStore = cookies();
-  const token = cookieStore.get('token')?.value;
+  const token = (await cookieStore).get('token')?.value;
 
   let user = null;
 

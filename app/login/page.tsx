@@ -14,8 +14,13 @@ export default function Login(): ReactElement {
                 email: userCred.email,
                 password: userCred.password,
             })
+            if (response.data.success) {
+                redirect("/");
+            }
+            else {
+                alert(response.data.message);
+            }
         }
-        redirect("/");
     }
 
     return (
