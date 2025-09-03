@@ -1,12 +1,12 @@
 'use client';
 import { beauty, electronics, fashion, home } from '@/app/indexType';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
 type Product = fashion | electronics | home | beauty;
 
-const ProductDetailPage = ({ params }: any) => {
-    const id = params.id;
+const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
+    const { id } = use(params);
     const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState(true);
 
