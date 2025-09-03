@@ -75,12 +75,23 @@ export type users = {
     userName: string;
     email: string;
     password: string;
-    cartItems?: object[];
+    cartItems?: CartItems;
     history?: object[];
     totalAmount?: number | string;
     isDeleted?: boolean;
     isLoggedIn: boolean;
 }
+
+export type paymentType = {
+    title: string;
+    image: string;
+    price: number;
+    quantity: number;
+}
+
+export type CartItems = { productId: string; quantity: number; selectedSize: string }
+
+export type AllCategories = fashion & electronics & home & beauty & users & CartItems;
 
 export type category = {
     categoryName: string;

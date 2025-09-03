@@ -1,4 +1,5 @@
 import clientPromise from '@/lib/mongo';
+import { ObjectId } from 'mongodb';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
@@ -7,12 +8,12 @@ export async function POST(request: NextRequest) {
 
 async function getProducts(request: NextRequest) {
     try {
-        const { page = 1, limit = 8, category = "All" } = await request.json();
+        const { page = 1, limit = 8, categoryId = "All" } = await request.json();
         const client = await clientPromise;
         const db = client.db('E_Commerce');
         const productsCollection = db.collection('productData');
         const skip = (page - 1) * limit;
-        const filter = category === "All" ? {} : { category };
+        const filter = categoryId === "All" ? {} : { categoryId: new ObjectId(categoryId) };
         const products = await productsCollection.find(filter).sort({ randomSeed: 1, _id: 1 }).skip(skip).limit(limit).toArray();
         const totalProducts = await productsCollection.countDocuments(filter);
         return NextResponse.json({

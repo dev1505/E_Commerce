@@ -1,16 +1,15 @@
 'use client';
 import CommonApiCall from '@/app/commonfunctions/CommonApiCall';
-import { beauty, electronics, fashion, home } from '@/app/indexType';
+import SuggestedProducts from '@/app/components/products/SuggestedProducts';
+import { AllCategories } from '@/app/indexType';
 import { use, useEffect, useState } from 'react';
-
-type Product = fashion | electronics | home | beauty;
 
 const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = use(params);
-    const [product, setProduct] = useState<Product | null>(null);
+    const [product, setProduct] = useState<AllCategories | null>(null);
     const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState(1);
-    const [selectedSize, setSelectedSize] = useState<string | null>(null);
+    const [selectedSize, setSelectedSize] = useState<string>("");
 
     useEffect(() => {
         if (id) {
@@ -38,7 +37,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
         const payload = {
             productId: product._id,
             quantity,
-            selectedSize,
+            selectedSize: selectedSize ?? "",
         };
 
         const response = await CommonApiCall('/api/cart/add', {
@@ -65,7 +64,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
     }
 
     const renderProductDetails = () => {
-        const renderCommonDetails = (p: Product) => (
+        const renderCommonDetails = (p: AllCategories) => (
             <>
                 <p className="text-gray-500 text-sm">Brand: {p.brand}</p>
                 <p className="text-gray-500 text-sm">Stock: {p.stock}</p>
@@ -135,13 +134,17 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <img src={product.image} alt={product.title} className="w-full rounded-lg shadow-lg" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="flex justify-center items-center overflow-hidden rounded w-full aspect-[4/3] bg-gray-100">
+                    <img
+                        src={product.image}
+                        alt={product.title}
+                        className="h-full w-full object-contain"
+                    />
                 </div>
                 <div className="flex flex-col">
-                    <h1 className="text-5xl font-extrabold mb-2">{product.title}</h1>
-                    <p className="text-gray-600 mb-4 text-3xl">{product.description}</p>
+                    <h1 className="text-3xl md:text-5xl font-extrabold mb-2">{product.title}</h1>
+                    <p className="text-gray-600 mb-4 text-xl md:text-3xl">{product.description}</p>
 
                     <div className="flex items-baseline mb-4">
                         <p className="text-3xl font-bold text-blue-600">${product.price}</p>
@@ -159,7 +162,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                         </div>
                     </div>
 
-                    {'size' in product && product.size && (
+                    {'size' in product && typeof (product.size) === 'object' && product.size && (
                         <div className="flex items-center mb-6">
                             <label htmlFor="size" className="font-semibold mr-4">Size:</label>
                             <select id="size" value={selectedSize || ''} onChange={(e) => setSelectedSize(e.target.value)} className="border rounded p-2">
@@ -172,11 +175,14 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
                     <div className="mt-auto">
                         <button onClick={() => handleAddToCart()} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
-                            Add to Cart
+                            Add to Cart - ${product.price * quantity}
                         </button>
                     </div>
                 </div>
             </div>
+            {product &&
+                <SuggestedProducts categoryId={product.categoryId} currentProductId={product._id} />
+            }
         </div>
     );
 };

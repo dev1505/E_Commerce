@@ -1,16 +1,7 @@
-import Categories from './components/Categories';
-import Navbar from './components/Navbar';
-import Products from './components/Products';
+import { redirect } from 'next/navigation';
 
 const HomePage = () => {
-
-  return (
-    <>
-      <Navbar />
-      <Categories />
-      <Products />
-    </>
-  );
+  redirect("/product")
 };
 
 export default HomePage;

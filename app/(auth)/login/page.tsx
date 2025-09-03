@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormEvent, ReactElement, useState } from 'react';
-import CommonApiCall from '../commonfunctions/CommonApiCall';
+import CommonApiCall from '../../commonfunctions/CommonApiCall';
 
 export default function Login(): ReactElement {
 
@@ -31,6 +31,11 @@ export default function Login(): ReactElement {
     return (
         <>
             <div className="flex flex-col items-center justify-center h-screen bg-gray-800">
+                <Link href={"/"}>
+                    <div className='text-blue-200 text-2xl md:text-4xl pb-16'>
+                        Welcome to Shopification
+                    </div>
+                </Link>
                 <div className="w-full max-w-md rounded-lg p-6">
                     <h2 className="text-3xl font-bold text-gray-200 mb-4 text-center">Login</h2>
                     <form

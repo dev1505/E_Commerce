@@ -15,13 +15,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <Link href={`/product/${product._id}`}>
-      <div className="rounded-lg p-4 shadow-xl hover:scale-105 duration-150 flex flex-col justify-between h-full cursor-pointer">
-        <img
-          src={product.image}
-          alt={product.title}
-          className="w-full h-64 object-cover mb-4"
-          onError={handleImageError}
-        />
+      <div className="rounded-lg p-4 bg-white shadow-xl hover:scale-105 duration-100 flex flex-col justify-between h-full cursor-pointer">
+        <div className="h-64 w-full overflow-hidden rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-full object-cover"
+            onError={handleImageError}
+          />
+        </div>
         <div>
           <h2 className="text-lg font-semibold">{product.title}</h2>
           <p className="text-gray-600 text-sm mt-1 truncate">{product.description}</p>
@@ -34,6 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </div>
     </Link>
+
   );
 };
 
