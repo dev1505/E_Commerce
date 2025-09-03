@@ -29,7 +29,6 @@ export async function getProduct(_id: string) {
         const db = client.db("E_Commerce");
         const productsCollection = db.collection("productData");
         const product = await productsCollection.findOne({ _id: new ObjectId(_id) });
-        console.log(product, "sldfnsdlfnkd")
         if (!product) {
             return NextResponse.json(
                 {

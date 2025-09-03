@@ -1,25 +1,30 @@
 'use client';
-import axios from 'axios';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
-import React, { FormEvent, ReactElement, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { FormEvent, ReactElement, useState } from 'react';
+import CommonApiCall from '../commonfunctions/CommonApiCall';
 
 export default function Login(): ReactElement {
 
     const [userCred, setUserCred] = useState({ email: "", password: "" });
+    const router = useRouter();
     async function handleLoginSubmit(e: FormEvent) {
         e.preventDefault();
-        if (userCred.email !== "" && userCred.password !== "") {
-            const response = await axios.post("/api/userlogin", {
+        if (!userCred.email || !userCred.password) {
+            alert("Please fill in both fields.");
+            return;
+        }
+        const response = await CommonApiCall('/api/userlogin', {
+            method: 'POST',
+            data: {
                 email: userCred.email,
                 password: userCred.password,
-            })
-            if (response.data.success) {
-                redirect("/");
-            }
-            else {
-                alert(response.data.message);
-            }
+            },
+        });
+        if (response?.success) {
+            router.push('/'); // Use `router.push` instead of `redirect` in client-side code
+        } else {
+            alert(response?.message || 'Login failed. Please try again.');
         }
     }
 

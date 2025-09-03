@@ -1,6 +1,6 @@
 'use client'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import CommonApiCall from '../commonfunctions/CommonApiCall';
 import { category } from '../indexType';
 
 export default function Categories() {
@@ -8,11 +8,15 @@ export default function Categories() {
     const [categoryData, setCategoryData] = useState<category[]>([]);
 
     async function fetchCategories() {
-        const response = await axios.get("/api/category");
-        const categories: category[] = response.data.data;
-        setCategoryData([{ categoryName: "All", categoryShortName: "All" }, ...categories]);
-    }
+        const response = await CommonApiCall('/api/category', { method: 'GET' });
 
+        if (response && Array.isArray(response.data)) {
+            const categories: category[] = response.data;
+            setCategoryData([{ categoryName: 'All', categoryShortName: 'All' }, ...categories]);
+        } else {
+            console.error('Failed to fetch categories or invalid format.');
+        }
+    }
     useEffect(() => {
         fetchCategories();
     }, [])

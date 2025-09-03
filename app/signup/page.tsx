@@ -1,26 +1,29 @@
 'use client';
 import axios from 'axios';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import React, { FormEvent, ReactElement, useState } from 'react';
+import CommonApiCall from '../commonfunctions/CommonApiCall';
 
 export default function Signup(): ReactElement {
 
     const [userCred, setUserCred] = useState({ email: "", password: "", userName: "" });
+    const router = useRouter();
     async function handleSignupSubmit(e: FormEvent) {
         e.preventDefault();
-        if (userCred.email !== "" && userCred.password !== "") {
-            const response = await axios.post("/api/adduser", {
-                userName: userCred.userName,
-                email: userCred.email,
-                password: userCred.password,
-            })
-            if (response.data.success) {
-                redirect("/");
-            }
-            else {
-                alert(response.data.message);
-            }
+        const { email, password, userName } = userCred;
+        if (!email || !password || !userName) {
+            alert('All fields are required.');
+            return;
+        }
+        const response = await CommonApiCall('/api/adduser', {
+            method: 'POST',
+            data: { email, password, userName },
+        });
+        if (response?.success) {
+            router.push('/'); // client-side navigation
+        } else {
+            alert(response?.message || 'Signup failed. Please try again.');
         }
     }
 

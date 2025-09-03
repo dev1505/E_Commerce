@@ -1,8 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
+import CommonApiCall from '../commonfunctions/CommonApiCall';
+import { beauty, electronics, fashion, home } from '../indexType';
 import ProductCard from './products/ProductCard';
-import { fashion, electronics, home, beauty } from '../indexType';
 
 type Product = fashion | electronics | home | beauty;
 
@@ -11,18 +11,27 @@ const Products = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const fetchAndSetProducts = async (pageNum: number) => {
-    try {
-      const res = await axios.post('/api/products/', {
+  type Product = fashion | electronics | home | beauty;
+
+  const fetchAndSetProducts = async (
+    pageNum: number,
+  ) => {
+    const response = await CommonApiCall('/api/products', {
+      method: 'POST',
+      data: {
         page: pageNum,
         limit: 8,
-        category: "All",
-      });
+        category: 'All',
+      },
+    });
 
-      setProducts((prev) => (pageNum === 1 ? res.data.data : [...prev, ...res.data.data]));
-      setTotalPages(res.data.totalPages);
-    } catch (error) {
-      console.error('Failed to fetch products:', error);
+    if (response && response.data) {
+      setProducts((prev) =>
+        pageNum === 1 ? response.data : [...prev, ...response.data]
+      );
+      setTotalPages(response.totalPages || 1);
+    } else {
+      console.error('Failed to fetch products or response malformed');
     }
   };
 

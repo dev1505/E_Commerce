@@ -1,6 +1,6 @@
 'use client';
+import CommonApiCall from '@/app/commonfunctions/CommonApiCall';
 import { beauty, electronics, fashion, home } from '@/app/indexType';
-import axios from 'axios';
 import { use, useEffect, useState } from 'react';
 
 type Product = fashion | electronics | home | beauty;
@@ -15,36 +15,46 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
     useEffect(() => {
         if (id) {
             const fetchProduct = async () => {
-                try {
-                    setLoading(true);
-                    const res = await axios.post(`/api/getproduct/`, { _id: id });
-                    setProduct(res.data.data);
-                    if (res.data.data.size && res.data.data.size.length > 0) {
-                        setSelectedSize(res.data.data.size[0]);
+                setLoading(true);
+                const data = await CommonApiCall('/api/getproduct', {
+                    method: 'POST',
+                    data: { _id: id },
+                });
+                if (data) {
+                    setProduct(data.data); // Assuming your API returns { data: product }
+                    if (data.data.size && data.data.size.length > 0) {
+                        setSelectedSize(data.data.size[0]);
                     }
-                } catch (error) {
-                    console.error('Failed to fetch product:', error);
-                } finally {
-                    setLoading(false);
                 }
+                setLoading(false);
             };
             fetchProduct();
         }
     }, [id]);
 
-    const handleAddToCart = () => {
-        if (product) {
-            const cartItem = {
-                ...product,
-                quantity,
-                selectedSize,
-            };
-            // In a real app, you'd add this to a global state (like Redux or Context API) or send it to a server.
-            // For now, we'll just log it to the console.
-            console.log('Added to cart:', cartItem);
+    const handleAddToCart = async () => {
+        if (!product) return;
+
+        const payload = {
+            productId: product._id,
+            quantity,
+            selectedSize,
+        };
+
+        const response = await CommonApiCall('/api/cart/add', {
+            method: 'POST',
+            data: payload,
+        });
+
+        if (!response) return; // Already redirected in CommonApiCall
+
+        if (response.success) {
             alert(`${product.title} has been added to your cart!`);
+        } else {
+            alert(`Error: ${response.message}`);
         }
     };
+
 
     if (loading) {
         return <div className="text-center py-10">Loading...</div>;
@@ -161,7 +171,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                     )}
 
                     <div className="mt-auto">
-                        <button onClick={handleAddToCart} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                        <button onClick={() => handleAddToCart()} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
                             Add to Cart
                         </button>
                     </div>
