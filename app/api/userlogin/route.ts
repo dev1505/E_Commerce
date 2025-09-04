@@ -57,7 +57,7 @@ export async function userLogin(body: users) {
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
             path: '/',
-            maxAge: 60 * 60
+            maxAge: 60 * 60 * 7
         });
 
         return NextResponse.json({
