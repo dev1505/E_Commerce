@@ -19,7 +19,6 @@ export async function POST(req: NextRequest) {
         const db = client.db('E_Commerce');
         const collection = db.collection('productData');
         const products = await collection.find({ categoryId: new ObjectId(categoryId) }).toArray();
-        console.log(products)
         return NextResponse.json(
             {
                 data: products,

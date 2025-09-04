@@ -1,101 +1,82 @@
-'use client';
-import { useEffect, useState } from 'react';
-import CommonApiCall from '../commonfunctions/CommonApiCall';
-import { beauty, category, electronics, fashion, home } from '../indexType';
-import Categories from './Categories';
-import ProductCard from './products/ProductCard';
+// app/products/page/[page]/page.tsx
+
+import { category, fashion, electronics, home, beauty } from '@/app/indexType';
+import CommonApiCall from '@/app/commonfunctions/CommonApiCall';
+import Categories from '@/app/components/Categories';
+import ProductCard from '@/app/components/products/ProductCard';
+import Pagination from '@/app/components/Pagination';
 
 type Product = fashion | electronics | home | beauty;
 
-export type ProductData = {
-  products: Product[];
-  page: number;
-  totalPages: number;
-  currentCategory: category;
-  categories: category[];
-}
+type PageProps = {
+  params: { page: string };
+  searchParams: { categoryId?: string };
+};
 
-const Products = () => {
-  const [productData, setProductData] = useState<ProductData>({
-    products: [],
-    page: 1,
-    totalPages: 1,
-    categories: [],
-    currentCategory: { categoryName: "All", categoryShortName: "All", _id: "All", productIds: [] }
-  });
+const Products = async ({ params, searchParams }: PageProps) => {
+  const currentPage = parseInt(params?.page) || 1;
+  const categoryId = searchParams?.categoryId || 'All';
+  const limit = 8;
 
-  useEffect(() => {
-    async function fetchCategories() {
-      const res = await CommonApiCall('/api/category', { method: 'GET' });
-      if (res?.data) {
-        setProductData(prev => ({
-          ...prev,
-          categories: [{ categoryName: "All", categoryShortName: "All", _id: "All", productIds: [] }, ...res.data]
-        }));
-      }
-    }
-    fetchCategories();
-  }, []);
-
-  useEffect(() => {
-    fetchAndSetProducts(1, productData.currentCategory._id);
-  }, [productData.currentCategory]);
-
-  const fetchAndSetProducts = async (pageNum: number = 1, categoryId: string = "All") => {
-    try {
-      const response = await CommonApiCall('/api/products', {
-        method: 'POST',
-        data: {
-          page: pageNum,
-          limit: 8,
-          categoryId: categoryId,
-        },
-      });
-
-      if (response && response.data) {
-        setProductData(prev => ({
-          ...prev,
-          totalPages: response.totalPages || 1,
-          products: pageNum === 1 ? response.data : [...prev.products, ...response.data],
-          page: pageNum
-        }));
-      } else {
-        console.error('Failed to fetch products or response malformed');
-      }
-    } catch (err) {
-      console.error('Error fetching products:', err);
-    }
+  const defaultCategory: category = {
+    categoryName: 'All',
+    categoryShortName: 'All',
+    _id: 'All',
+    productIds: [],
   };
 
-  const handleLoadMore = () => {
-    const nextPage = productData.page + 1;
-    if (nextPage <= productData.totalPages) {
-      fetchAndSetProducts(nextPage, productData.currentCategory._id);
+  // Fetch categories
+  let categories: category[] = [defaultCategory];
+  try {
+    const categoryRes = await CommonApiCall('/api/category', { method: 'GET' });
+    if (categoryRes?.data) {
+      categories = [defaultCategory, ...categoryRes.data];
     }
-  };
+  } catch (error) {
+    console.error('Failed to fetch categories:', error);
+  }
+
+  // Find the currentCategory object from categories list
+  const currentCategory =
+    categories.find((cat) => cat._id === categoryId) || defaultCategory;
+
+  // Fetch products
+  let productData: Product[] = [];
+  let totalPages = 1;
+
+  try {
+    const productRes = await CommonApiCall(`/api/page/${currentPage}`, {
+      method: 'POST',
+      data: {
+        categoryId,
+        limit,
+      },
+    });
+
+    if (productRes?.data) {
+      productData = productRes.data;
+      totalPages = productRes.totalPages || 1;
+    }
+  } catch (error) {
+    console.error('Failed to fetch products:', error);
+  }
 
   return (
     <div className="px-4 py-8 bg-zinc-100 flex flex-col justify-center items-center self-center">
-      <Categories categoryData={productData} setCategoryData={setProductData} />
+      <Categories categories={categories} currentCategory={currentCategory._id} />
+
       <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
 
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-fit gap-8">
-        {productData.products.map((product) => (
+        {productData.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
 
-      {/* Load More */}
-      {productData.page < productData.totalPages && (
-        <div className="text-center mt-8">
-          <button
-            onClick={handleLoadMore}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            More
-          </button>
-        </div>
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <Pagination page={currentPage} totalPages={totalPages} categoryId={categoryId} />
       )}
     </div>
   );

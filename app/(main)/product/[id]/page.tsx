@@ -133,13 +133,13 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="flex justify-center items-center overflow-hidden rounded w-full aspect-[4/3] bg-gray-100">
+        <div className="px-4 md:px-20 py-8 bg-zinc-50">
+            <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-8">
+                <div className="flex justify-center items-center overflow-hidden rounded w-full aspect-[4/3]">
                     <img
                         src={product.image}
                         alt={product.title}
-                        className="h-full w-full object-contain"
+                        className="max-h-full max-w-full rounded-lg object-contain"
                     />
                 </div>
                 <div className="flex flex-col">

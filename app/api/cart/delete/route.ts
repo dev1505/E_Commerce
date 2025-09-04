@@ -37,8 +37,6 @@ export async function POST(req: NextRequest) {
             { $pull: { cartItems: pullCondition } }
         );
 
-        console.log('MongoDB updateOne result:', result);
-
         if (result.modifiedCount === 0) {
             return NextResponse.json(
                 { success: false, message: 'No matching cart item found' },

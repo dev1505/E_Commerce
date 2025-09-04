@@ -16,7 +16,6 @@ const SuggestedProducts: React.FC<SuggestedProductsProps> = ({ categoryId, curre
 
   useEffect(() => {
     const fetchSuggestedProducts = async () => {
-      console.log(categoryId)
       const res = await CommonApiCall(`/api/products/suggestions`, {
         method: 'POST',
         data: { categoryId: categoryId },

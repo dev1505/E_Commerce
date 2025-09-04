@@ -1,32 +1,26 @@
-import { category } from '../indexType';
-import { ProductData } from './Products';
-import { Dispatch, SetStateAction } from 'react';
+// components/Categories.tsx
+import Link from 'next/link';
+import { category } from '@/app/indexType';
 
-type categoryType = {
-    categoryData: ProductData;
-    setCategoryData: Dispatch<SetStateAction<ProductData>>;
+interface CategoriesProps {
+    categories: category[];
+    currentCategory: string;
 }
 
-export default function Categories({ categoryData, setCategoryData }: categoryType) {
-
-    function handleCurrentCategory(category: category) {
-        console.log(category);
-        setCategoryData({ ...categoryData, currentCategory: category });
-    }
-
+const Categories = ({ categories, currentCategory }: CategoriesProps) => {
     return (
-        <div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
-                {categoryData.categories?.map((category: category, index: number) => (
-                    <button
-                        key={index}
-                        onClick={() => handleCurrentCategory(category)}
-                        className={`w-full cursor-pointer text-center border border-blue-500 font-semibold py-2 px-3 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ${category.categoryName === categoryData.currentCategory.categoryName && "bg-blue-500 text-white"}`}
-                    >
-                        {category?.categoryName}
-                    </button>
-                ))}
-            </div>
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+            {categories.map((cat) => (
+                <Link
+                    key={cat._id}
+                    href={`/product/page/1?categoryId=${cat._id}`}
+                    className={`px-4 py-2 border border-blue-500 hover:bg-blue-500 hover:text-white rounded ${currentCategory === cat._id ? 'bg-blue-500 text-white' : 'bg-white text-black'}`}
+                >
+                    {cat.categoryName}
+                </Link>
+            ))}
         </div>
     );
-}
+};
+
+export default Categories;

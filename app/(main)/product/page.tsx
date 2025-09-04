@@ -1,9 +1,5 @@
-import Products from '@/app/components/Products';
+import { redirect } from 'next/navigation';
 
-export default function page() {
-    return (
-        <>
-            <Products />
-        </>
-    );
-};
+export default function ProductsPageRoot() {
+    redirect('/product/page/1');
+}

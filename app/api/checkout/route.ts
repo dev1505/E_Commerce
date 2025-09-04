@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     try {
         const body = await req.json();
         if (!body.items || !Array.isArray(body.items)) {
-            return NextResponse.json({ error: 'Invalid cart data' }, { status: 400 });
+            return NextResponse.json({ message: 'Invalid cart data', success: false }, { status: 400 });
         }
 
         const line_items = body.items.map((item: any) => ({
@@ -27,13 +27,13 @@ export async function POST(req: Request) {
             payment_method_types: ['card'],
             mode: 'payment',
             line_items,
-            success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+            success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/userlogin`,
             cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cart`,
         });
 
-        return NextResponse.json({ id: session.id });
+        return NextResponse.json({ id: session.id, success: true });
     } catch (err: any) {
         console.error('Stripe Checkout Error:', err.message);
-        return NextResponse.json({ error: 'Stripe checkout failed' }, { status: 500 });
+        return NextResponse.json({ message: 'Stripe checkout failed', success: false }, { status: 500 });
     }
 }

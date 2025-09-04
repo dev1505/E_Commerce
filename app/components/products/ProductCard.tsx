@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { fashion, electronics, home, beauty } from '@/app/indexType';
 
@@ -8,20 +7,16 @@ interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    e.currentTarget.src = '/product_alt_image.avif';
-  };
-
+const ProductCard = ({ product }: ProductCardProps) => {
+  const imageSrc = product.image || '/product_alt_image.avif';
   return (
     <Link href={`/product/${product._id}`}>
       <div className="rounded-lg p-4 bg-white shadow-xl hover:scale-105 duration-100 flex flex-col justify-between h-full cursor-pointer">
-        <div className="h-64 w-full overflow-hidden rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+        <div className="h-64 w-full overflow-hidden mb-4 flex items-center justify-center">
           <img
-            src={product.image}
+            src={imageSrc}
             alt={product.title}
-            className="w-full h-full object-cover"
-            onError={handleImageError}
+            className="max-w-full max-h-full rounded object-contain"
           />
         </div>
         <div>
@@ -36,7 +31,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </div>
     </Link>
-
   );
 };
 
