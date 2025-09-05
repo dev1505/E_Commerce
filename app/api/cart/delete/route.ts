@@ -1,5 +1,7 @@
+import { CartItems } from '@/app/indexType';
 import clientPromise from '@/lib/mongo';
 import jwt from 'jsonwebtoken';
+import { ObjectId } from 'mongodb';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -26,25 +28,36 @@ export async function POST(req: NextRequest) {
         const client = await clientPromise;
         const db = client.db('E_Commerce');
         const usersCollection = db.collection('userData');
-
-        // Build the $pull condition dynamically
-        const pullCondition = selectedSize
-            ? { productId: productId, selectedSize: selectedSize }
-            : { productId: productId };
-
-        const result = await usersCollection.updateOne(
-            { email: decoded.email },
-            { $pull: { cartItems: pullCondition } }
-        );
-
-        if (result.modifiedCount === 0) {
+        const pullCondition = { productId: new ObjectId(productId), selectedSize: selectedSize }
+        const user = await usersCollection.findOne({ email: decoded.email });
+        if (!user) {
             return NextResponse.json(
-                { success: false, message: 'No matching cart item found' },
+                { success: false, message: 'User not found after update' },
                 { status: 404 }
             );
         }
 
-        return NextResponse.json({ success: true }, { status: 200 });
+        const cartItems = user.cartItems.filter((cartItem: CartItems) => (pullCondition.productId != new ObjectId(cartItem.productId) && cartItem.selectedSize != pullCondition.selectedSize));
+
+        const totalAmount = (user.cartItems || []).reduce(
+            (sum: number, item: any) => sum + (item.price * item.quantity),
+            0
+        );
+        await usersCollection.updateOne(
+            { email: decoded.email },
+            { $set: { totalAmount, cartItems: cartItems } }
+        );
+
+        return NextResponse.json(
+            {
+                success: true,
+                message: 'Item removed from cart',
+                cartItems: cartItems || [],
+                totalAmount,
+            },
+            { status: 200 }
+        );
+
     } catch (error: any) {
         console.error('Error removing cart item:', error.message);
         return NextResponse.json(
@@ -53,4 +66,3 @@ export async function POST(req: NextRequest) {
         );
     }
 }
-

@@ -49,13 +49,13 @@ export async function userLogin(body: users) {
         const { password: _, ...safeUser } = user;
 
         // Create JWT token
-        const token = jwt.sign({ userName: user?.userName, email: user?.email }, process.env.JWT_SECRET);
+        const token = jwt.sign({ userName: user?.userName, email: user?.email }, process.env.JWT_SECRET ?? "");
 
         // Set cookie
         (await cookies()).set('token', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            secure: true,
+            sameSite: 'none',
             path: '/',
             maxAge: 60 * 60 * 7
         });

@@ -161,7 +161,6 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                             <button onClick={() => setQuantity(q => q + 1)} className="bg-gray-200 text-gray-700 hover:bg-gray-300 px-3 py-1 rounded-r">+</button>
                         </div>
                     </div>
-
                     {'size' in product && typeof (product.size) === 'object' && product.size && (
                         <div className="flex items-center mb-6">
                             <label htmlFor="size" className="font-semibold mr-4">Size:</label>

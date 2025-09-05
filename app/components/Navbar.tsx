@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { cookies } from 'next/headers';
 import jwt from 'jsonwebtoken';
 import { IoLogOutOutline } from 'react-icons/io5';
-import { CiShoppingCart } from 'react-icons/ci';
+import { FiShoppingCart } from "react-icons/fi";
+import { GoHistory } from "react-icons/go";
 
 const JWT_SECRET = process.env.JWT_SECRET!;
 
@@ -24,35 +25,38 @@ export default async function Navbar() {
   return (
     <nav className="bg-gray-800 text-white px-4 py-3 shadow-md">
       <div className="container mx-auto flex flex-wrap justify-between items-center gap-y-4">
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
           Shopification
         </Link>
 
-        {/* Auth/Cart Buttons */}
         <div className="flex flex-wrap items-center gap-4 text-base md:text-lg">
           {user ? (
             <>
               <span className="text-gray-300">Welcome, {user.userName}</span>
 
-              {/* Cart Icon */}
               <Link href="/cart" className="relative">
                 <button
-                  className="bg-white text-black hover:bg-green-500 font-bold p-2 rounded-full text-2xl transition duration-200"
+                  className="bg-white text-black hover:bg-green-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
                   title="Go to Cart"
                 >
-                  <CiShoppingCart />
+                  <FiShoppingCart />
+                </button>
+              </Link>
+              <Link href="/cart" className="relative">
+                <button
+                  className="bg-white text-black hover:bg-blue-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
+                  title="Go to History"
+                >
+                  <GoHistory />
                 </button>
               </Link>
 
-              {/* Logout */}
               <form action="/api/logout" method="POST">
                 <button
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-200 flex items-center gap-1"
+                  className="bg-white text-black hover:bg-red-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
                   title="Logout"
                 >
-                  <IoLogOutOutline className="text-xl" />
-                  <span className="hidden sm:inline">Logout</span>
+                  <IoLogOutOutline />
                 </button>
               </form>
             </>

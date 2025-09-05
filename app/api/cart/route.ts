@@ -1,10 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongo';
 import jwt from 'jsonwebtoken';
-import { cookies } from 'next/headers';
 import { ObjectId } from 'mongodb';
+import { cookies } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
 
-export type CartItems = { productId: string; quantity: number; selectedSize: string[] };
+export type CartItems = {
+    productId: string;
+    quantity: number;
+    selectedSize: string;
+};
 
 export type users = {
     userName: string;
@@ -34,33 +38,28 @@ export async function GET(req: NextRequest) {
         const db = client.db('E_Commerce');
 
         const usersCollection = db.collection<users>('userData');
-        const productsCollection = db.collection('productData');
-
-        // Find user by email
         const user = await usersCollection.findOne({ email: decoded.email });
 
         if (!user || !user.cartItems || user.cartItems.length === 0) {
             return NextResponse.json({ success: true, data: [] }, { status: 200 });
         }
+        const productIds = user.cartItems.map(item => item.productId);
 
-        // Extract productIds from cartItems
-        const productIds = user.cartItems.map(item => new ObjectId(item.productId));
-
-        // Find all products in cart by their ObjectIds
-        const products = await productsCollection
-            .find({ _id: { $in: productIds } })
-            .toArray();
-
-        // Combine cart items with product details
+        const collection = db.collection("productData");
+        const products = await collection.find({ _id: { $in: productIds.map(id => new ObjectId(id)) } }).toArray();
         const cartWithDetails = user.cartItems.map(cartItem => {
             const product = products.find(p => p._id.toString() === cartItem.productId);
             if (!product) return null;
+            const price = product.discountedPrice || product.price;
+            const totalPrice = price * cartItem.quantity;
 
             return {
                 ...product,
                 _id: cartItem.productId,
                 quantity: cartItem.quantity,
-                selectedSize: cartItem.selectedSize ?? "",
+                selectedSize: cartItem.selectedSize,
+                price,
+                totalPrice,
             };
         }).filter(Boolean);
 

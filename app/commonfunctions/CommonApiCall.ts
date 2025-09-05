@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 const CommonApiCall = async <T = any>(
     url: string,
-    config: AxiosRequestConfig
+    config: AxiosRequestConfig,
 ): Promise<T | null> => {
     try {
         const response = await axios({

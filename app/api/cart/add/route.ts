@@ -1,78 +1,68 @@
-// /api/cart/route.ts
 import clientPromise from '@/lib/mongo';
 import jwt from 'jsonwebtoken';
+import { ObjectId } from 'mongodb';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
-interface CartItem {
-    productId: string;
-    quantity: number;
-    selectedSize: string | null;
-}
-
-async function getUserFromToken(token: string) {
+export async function POST(req: NextRequest) {
     try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as { email: string };
-        const client = await clientPromise;
-        const db = client.db('E_Commerce');
-        const users = db.collection('userData');
-        return await users.findOne({ email: decoded.email });
-    } catch (error: any) {
-        console.error('JWT verification failed:', error.message);
-        return null;
-    }
-}
-
-export async function POST(request: NextRequest) {
-    try {
-        const { productId, quantity, selectedSize } = await request.json();
-
-        if (
-            !productId ||
-            typeof productId !== 'string' ||
-            typeof quantity !== 'number' ||
-            quantity <= 0 ||
-            (selectedSize !== null && typeof selectedSize !== 'string')
-        ) {
-            return NextResponse.json({ message: 'Invalid request data', success: false }, { status: 400 });
-        }
-
         const token = (await cookies()).get('token')?.value;
         if (!token) {
-            return NextResponse.json({ message: 'Unauthorized', success: false }, { status: 401 });
+            return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
         }
 
-        const user = await getUserFromToken(token);
-        if (!user) {
-            return NextResponse.json({ message: 'Invalid token', success: false }, { status: 401 });
+        const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as { email: string };
+        const { productId, quantity, selectedSize } = await req.json();
+
+        if (!productId) {
+            return NextResponse.json({ success: false, message: 'Invalid input' }, { status: 400 });
         }
 
         const client = await clientPromise;
         const db = client.db('E_Commerce');
         const users = db.collection('userData');
+        const product = await db.collection("productData").findOne({ _id: new ObjectId(productId) });
 
-        const cartItems: CartItem[] = user.cartItems || [];
+        if (!product) {
+            return NextResponse.json({ success: false, message: 'Product not found' }, { status: 404 });
+        }
 
-        const itemIndex = cartItems.findIndex(
-            (item) => item.productId === productId && item.selectedSize === selectedSize
+        const price = product.discountedPrice || product.price || 0;
+
+        const user = await users.findOne({ email: decoded.email });
+        if (!user) {
+            return NextResponse.json({ success: false, message: 'User not found' }, { status: 404 });
+        }
+
+        const cartItems = user.cartItems || [];
+
+        const existingIndex = cartItems.findIndex(
+            (item: any) => item.productId === productId && item.selectedSize === selectedSize
         );
 
-        if (itemIndex > -1) {
-            cartItems[itemIndex].quantity += quantity;
+        if (existingIndex !== -1) {
+            cartItems[existingIndex].quantity += quantity;
+            cartItems[existingIndex].price = price; // Update price in case it changed
         } else {
-            cartItems.push({ productId, quantity, selectedSize });
+            cartItems.push({ productId, quantity, selectedSize, price });
         }
 
-        const update = await users.updateOne({ email: user.email }, { $set: { cartItems } });
+        // Recalculate totalAmount
+        const totalAmount = cartItems.reduce((sum: any, item: any) => sum + (item.price * item.quantity), 0);
 
-        if (!update.modifiedCount) {
-            return NextResponse.json({ message: 'Failed to update cart', success: false }, { status: 500 });
+        const updateResult = await users.updateOne(
+            { email: decoded.email },
+            { $set: { cartItems, totalAmount } }
+        );
+
+        if (!updateResult.modifiedCount) {
+            return NextResponse.json({ success: false, message: 'Failed to update cart' }, { status: 500 });
         }
 
-        return NextResponse.json({ message: 'Item added to user cart', success: true }, { status: 200 });
+        return NextResponse.json({ success: true, message: 'Item added to cart', totalAmount }, { status: 200 });
 
     } catch (error: any) {
-        console.error('Server Error:', error.message);
-        return NextResponse.json({ message: 'Internal Server Error', success: false }, { status: 500 });
+        console.error('Error:', error.message);
+        return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
     }
 }
