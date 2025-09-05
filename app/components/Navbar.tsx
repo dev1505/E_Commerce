@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { cookies } from 'next/headers';
 import jwt from 'jsonwebtoken';
@@ -24,41 +25,43 @@ export default async function Navbar() {
 
   return (
     <nav className="bg-gray-800 text-white px-4 py-3 shadow-md">
-      <div className="container mx-auto flex flex-wrap justify-between items-center gap-y-4">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-y-4 md:gap-y-0">
         <Link href="/" className="text-2xl font-bold">
           Shopification
         </Link>
 
-        <div className="flex flex-wrap items-center gap-4 text-base md:text-lg">
+        <div className="flex flex-col md:flex-row items-center gap-4 text-base md:text-lg">
           {user ? (
             <>
               <span className="text-gray-300">Welcome, {user.userName}</span>
 
-              <Link href="/cart" className="relative">
-                <button
-                  className="bg-white text-black hover:bg-green-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
-                  title="Go to Cart"
-                >
-                  <FiShoppingCart />
-                </button>
-              </Link>
-              <Link href="/cart" className="relative">
-                <button
-                  className="bg-white text-black hover:bg-blue-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
-                  title="Go to History"
-                >
-                  <GoHistory />
-                </button>
-              </Link>
+              <div className="flex gap-4">
+                <Link href="/cart" className="relative">
+                  <button
+                    className="bg-white text-black hover:bg-green-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
+                    title="Go to Cart"
+                  >
+                    <FiShoppingCart />
+                  </button>
+                </Link>
+                <Link href="/userhistory" className="relative">
+                  <button
+                    className="bg-white text-black hover:bg-blue-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
+                    title="Go to History"
+                  >
+                    <GoHistory />
+                  </button>
+                </Link>
 
-              <form action="/api/logout" method="POST">
-                <button
-                  className="bg-white text-black hover:bg-red-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
-                  title="Logout"
-                >
-                  <IoLogOutOutline />
-                </button>
-              </form>
+                <form action="/api/logout" method="POST">
+                  <button
+                    className="bg-white text-black hover:bg-red-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
+                    title="Logout"
+                  >
+                    <IoLogOutOutline />
+                  </button>
+                </form>
+              </div>
             </>
           ) : (
             <Link href="/login">
@@ -72,3 +75,4 @@ export default async function Navbar() {
     </nav>
   );
 }
+

@@ -44,7 +44,7 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
     const totalPages = productRes?.totalPages || 1;
 
     return (
-        <div className="px-4 py-8 bg-zinc-100 flex flex-col justify-center items-center self-center">
+        <div className="px-10 md:px-15 py-8 bg-zinc-100 flex flex-col justify-center items-center self-center">
             <Categories
                 categories={categories}
                 currentCategory={categoryId}
