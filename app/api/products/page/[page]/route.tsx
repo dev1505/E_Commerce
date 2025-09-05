@@ -3,16 +3,17 @@ import clientPromise from "@/lib/mongo";
 import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request: NextRequest, { params }: { params: { page: string } }) {
+export async function POST(request: NextRequest, { params }: { params: Promise<{ page: string }> }) {
     try {
         const { categoryId = "All", limit = 8 } = await request.json();
-        const page = parseInt((await params).page) || 1;
+        const { page } = await params;
+        const pageNumber = parseInt(page) || 1;
 
         const client = await clientPromise;
         const db = client.db("E_Commerce");
         const productsCollection = db.collection("productData");
 
-        const skip = (page - 1) * limit;
+        const skip = (pageNumber - 1) * limit;
         const filter = categoryId === "All" ? {} : { categoryId: new ObjectId(categoryId) };
 
         const products = await productsCollection

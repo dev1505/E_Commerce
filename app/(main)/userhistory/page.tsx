@@ -1,4 +1,5 @@
 import { userHistory } from '@/app/api/userhistory/route';
+import CommonApiCall from '@/app/commonfunctions/CommonApiCall';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 
@@ -8,8 +9,9 @@ async function getUserHistory() {
         return { history: [] };
     }
 
-    const { message, success, data } = await userHistory();
-    return data || { history: [] };
+    const res = (await userHistory()).json();
+    const data = await res;
+    return data.data;
 }
 
 const UserHistoryPage = async () => {

@@ -63,7 +63,7 @@ const Products = async ({ params, searchParams }: PageProps) => {
 
   return (
     <div className="px-4 py-8 bg-zinc-100 flex flex-col justify-center items-center self-center">
-      <Categories categories={categories} currentCategory={currentCategory._id} />
+      <Categories categories={categories} currentCategory={currentCategory?._id || 'All'} />
 
       <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
 

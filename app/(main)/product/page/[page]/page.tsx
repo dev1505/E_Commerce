@@ -28,9 +28,9 @@ const ProductsPage = async ({ params, searchParams }: PageProps) => {
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-    const categoryRes = await CommonApiCall(`${baseUrl}/api/category`, { method: 'GET' });
+    const categoryRes = await CommonApiCall(`${baseUrl}api/category`, { method: 'GET' });
 
-    const productRes = await CommonApiCall(`${baseUrl}/api/products/page/${currentPage}`, {
+    const productRes = await CommonApiCall(`${baseUrl}api/products/page/${currentPage}`, {
         method: 'POST',
         data: { categoryId, limit },
     });

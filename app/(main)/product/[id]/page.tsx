@@ -20,7 +20,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                     data: { _id: id },
                 });
                 if (data) {
-                    setProduct(data.data); // Assuming your API returns { data: product }
+                    setProduct(data.data);
                     if (data.data.size && data.data.size.length > 0) {
                         setSelectedSize(data.data.size[0]);
                     }
@@ -45,7 +45,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
             data: payload,
         });
 
-        if (!response) return; // Already redirected in CommonApiCall
+        if (!response) return;
 
         if (response.success) {
             alert(`${product.title} has been added to your cart!`);
@@ -75,7 +75,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
             </>
         );
 
-        if ('gender' in product) { // Fashion
+        if ('gender' in product) {
             return (
                 <>
                     {renderCommonDetails(product)}
@@ -83,7 +83,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                 </>
             );
         }
-        if ('model' in product) { // Electronics
+        if ('model' in product) {
             return (
                 <>
                     {renderCommonDetails(product)}
@@ -96,7 +96,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                 </>
             );
         }
-        if ('material' in product) { // Home
+        if ('material' in product) {
             return (
                 <>
                     {renderCommonDetails(product)}
@@ -110,7 +110,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                 </>
             );
         }
-        if ('ingredients' in product) { // Beauty
+        if ('ingredients' in product) {
             return (
                 <>
                     {renderCommonDetails(product)}

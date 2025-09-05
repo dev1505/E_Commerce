@@ -2,11 +2,12 @@ import clientPromise from "@/lib/mongo";
 import jwt from 'jsonwebtoken';
 import { ObjectId } from "mongodb";
 import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
 export async function userHistory() {
     try {
         const token = (await cookies()).get('token')?.value;
-        if (!token) return { success: false, message: 'Not authenticated' };
+        if (!token) return NextResponse.json({ success: false, message: 'Not authenticated' });
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET!) as { email: string };
         const client = await clientPromise;
@@ -15,10 +16,10 @@ export async function userHistory() {
         const usersCollection = db.collection('userData');
         const user = await usersCollection.findOne({ email: decoded.email });
 
-        if (!user) return {
+        if (!user) return NextResponse.json({
             success: false,
             message: 'User not found',
-        };
+        });
 
         const productsCollection = db.collection('productData');
 
@@ -38,7 +39,7 @@ export async function userHistory() {
             })
         );
 
-        return {
+        return NextResponse.json({
             success: true,
             message: "Full purchase history",
             data: {
@@ -49,12 +50,12 @@ export async function userHistory() {
                 },
                 history: fullHistoryWithDetails
             }
-        };
+        });
     } catch (error) {
         console.error("userHistory error:", error);
-        return {
+        return NextResponse.json({
             success: false,
             message: 'Server error'
-        };
+        });
     }
 }

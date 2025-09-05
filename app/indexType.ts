@@ -91,7 +91,7 @@ export type paymentType = {
 
 export type CartItems = { productId: string; quantity: number; selectedSize: string, price: number }
 
-export type AllCategories = fashion & electronics & home & beauty & users & CartItems;
+export type AllCategories = fashion | electronics | home | beauty;
 
 export type category = {
     categoryName: string;

@@ -2,11 +2,12 @@ import clientPromise from "@/lib/mongo";
 import jwt from 'jsonwebtoken';
 import { ObjectId } from "mongodb";
 import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
-export async function getReceipt() {
+export async function userReceipt() {
     try {
         const token = (await cookies()).get('token')?.value;
-        if (!token) return { success: false, message: 'Not authenticated' };
+        if (!token) return NextResponse.json({ success: false, message: 'Not authenticated' });
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET!) as { email: string };
         const client = await clientPromise;
@@ -15,7 +16,7 @@ export async function getReceipt() {
         const usersCollection = db.collection('userData');
         const user = await usersCollection.findOne({ email: decoded.email });
 
-        if (!user) return { success: false, message: 'User not found' };
+        if (!user) return NextResponse.json({ success: false, message: 'User not found' });
 
         // Move items to history if needed
         if (user.cartItems.length) {
@@ -29,7 +30,6 @@ export async function getReceipt() {
             user.history.push(user.cartItems); // Update local user object
             user.cartItems = [];
         }
-
         const productsCollection = db.collection('productData');
         const latestHistory = user.history[user.history.length - 1] || [];
 
@@ -39,13 +39,13 @@ export async function getReceipt() {
             )
         );
 
-        return {
+        return NextResponse.json({
             success: true,
             message: "Receipt",
             data: { user: user, productData: productData }
-        };
+        });
     } catch (error) {
         console.error("getReceipt error:", error);
-        return { success: false, message: 'Server error' };
+        return NextResponse.json({ success: false, message: 'Server error' });
     }
 }

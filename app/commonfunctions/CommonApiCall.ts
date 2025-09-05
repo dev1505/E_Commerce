@@ -5,6 +5,7 @@ const CommonApiCall = async <T = any>(
     config: AxiosRequestConfig,
 ): Promise<T | null> => {
     try {
+        console.log('Making API call to:', url, 'with config:', config);
         const response = await axios({
             url,
             withCredentials: true,
@@ -14,7 +15,6 @@ const CommonApiCall = async <T = any>(
         return response.data;
     } catch (error: any) {
         if (error?.response?.status === 401) {
-            // Redirect manually
             if (typeof window !== 'undefined') {
                 window.location.href = '/login';
             }
