@@ -2,7 +2,11 @@ import clientPromise from "@/lib/mongo";
 import jwt from 'jsonwebtoken';
 import { ObjectId } from "mongodb";
 import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(request: NextRequest) {
+    return await userReceipt();
+}
 
 export async function userReceipt() {
     try {

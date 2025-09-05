@@ -3,7 +3,6 @@ import { userReceipt } from "@/app/api/receipt/route";
 
 export default async function ReceiptPage() {
     const responseData = (await (await userReceipt()).json());
-    console.log(responseData)
     if (!responseData) {
         return <div className="text-center py-10">Error: Could not fetch receipt data.</div>;
     }

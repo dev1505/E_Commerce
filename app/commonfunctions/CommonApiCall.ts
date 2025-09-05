@@ -5,7 +5,6 @@ const CommonApiCall = async <T = any>(
     config: AxiosRequestConfig,
 ): Promise<T | null> => {
     try {
-        console.log('Making API call to:', url, 'with config:', config);
         const response = await axios({
             url,
             withCredentials: true,
