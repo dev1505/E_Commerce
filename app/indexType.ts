@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+
 export type fashion = {
     _id: string; // MongoDB ObjectId as string
     categoryId: string; // MongoDB ObjectId as string (reference to category)
@@ -13,6 +15,7 @@ export type fashion = {
     size?: string[]; // e.g., ['S', 'M', 'L']
     image: string;
     rating: number; // typically 0 to 5
+    userId?: ObjectId;
 };
 
 export type electronics = {
@@ -31,6 +34,7 @@ export type electronics = {
     features: string[];
     image: string;
     rating: number; // 0–5 scale
+    userId?: ObjectId;
 };
 
 export type home = {
@@ -50,6 +54,7 @@ export type home = {
     features: string[];
     image: string;
     rating: number; // scale 0–5
+    userId?: ObjectId;
 };
 
 export type beauty = {
@@ -69,9 +74,11 @@ export type beauty = {
     image: string;
     rating: number; // 0–5
     expirationDate?: string; // optional, ISO date string
+    userId?: ObjectId;
 };
 
 export type users = {
+    _id?: ObjectId;
     userName: string;
     email: string;
     password: string;
@@ -80,6 +87,9 @@ export type users = {
     totalAmount?: number | string;
     isDeleted?: boolean;
     isLoggedIn: boolean;
+    isAdmin: boolean;
+    isSuperuser: boolean;
+    hasApplied: boolean;
 }
 
 export type paymentType = {
@@ -98,4 +108,9 @@ export type category = {
     categoryShortName: string;
     productIds?: []
     _id?: string
+}
+
+export type imageComponentProps = {
+    imageSrc: string;
+    title: string;
 }

@@ -1,5 +1,5 @@
+import { beauty, electronics, fashion, home } from '@/app/indexType';
 import Link from 'next/link';
-import { fashion, electronics, home, beauty } from '@/app/indexType';
 
 type Product = fashion | electronics | home | beauty;
 

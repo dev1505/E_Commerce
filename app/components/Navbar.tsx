@@ -1,26 +1,37 @@
 
+'use client'
+import { users } from "@/app/indexType";
+import axios from 'axios';
 import Link from 'next/link';
-import { cookies } from 'next/headers';
-import jwt from 'jsonwebtoken';
-import { IoLogOutOutline } from 'react-icons/io5';
+import { useEffect, useState } from 'react';
 import { FiShoppingCart } from "react-icons/fi";
 import { GoHistory } from "react-icons/go";
+import { IoLogOutOutline } from 'react-icons/io5';
+import { RiAdminLine } from "react-icons/ri";
+import CommonApiCall from '../commonfunctions/CommonApiCall';
 
-const JWT_SECRET = process.env.JWT_SECRET!;
+export default function Navbar() {
+  const [user, setUser] = useState<users | null>(null);
 
-export default async function Navbar() {
-  const cookieStore = cookies();
-  const token = (await cookieStore).get('token')?.value;
-
-  let user = null;
-
-  if (token) {
+  const fetchUser = async () => {
     try {
-      const decoded = jwt.verify(token, JWT_SECRET) as { email: string; userName: string };
-      user = decoded;
+      const response = await axios.get("/api/user");
+      setUser(response.data.data);
     } catch (error) {
-      // Invalid token
+      // Not logged in
     }
+  };
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  async function handleSellingApplication() {
+    const response = await CommonApiCall('/api/user/application', { method: 'GET' });
+    if (await response.success) {
+      fetchUser();
+    }
+    alert(await response.message)
   }
 
   return (
@@ -61,6 +72,23 @@ export default async function Navbar() {
                     <IoLogOutOutline />
                   </button>
                 </form>
+                {
+                  user.isAdmin || user.isSuperuser ? (
+                    <Link href="/admin">
+                      <button className="bg-white text-black hover:bg-cyan-500 hover:text-white font-bold p-2 rounded-full text-2xl transition duration-200"
+                      title="Admin Page"
+                      >
+                        <RiAdminLine />
+                      </button>
+                    </Link>
+                  ) : (
+                    !user.hasApplied ?
+                      < button onClick={handleSellingApplication} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200">
+                        Want to Sell?
+                      </button>
+                      : ""
+                  )
+                }
               </div>
             </>
           ) : (
@@ -72,7 +100,7 @@ export default async function Navbar() {
           )}
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }
 
