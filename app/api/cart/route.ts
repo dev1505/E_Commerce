@@ -50,7 +50,7 @@ export async function GET(req: NextRequest) {
         const cartWithDetails = user.cartItems.map(cartItem => {
             const product = products.find(p => p._id.toString() === cartItem.productId);
             if (!product) return null;
-            const price = product.discountedPrice || product.price;
+            const price = product.price || product.discountedPrice;
             const totalPrice = price * cartItem.quantity;
 
             return {

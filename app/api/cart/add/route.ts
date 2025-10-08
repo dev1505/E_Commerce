@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ success: false, message: 'Product not found' }, { status: 404 });
         }
 
-        const price = product.discountedPrice || product.price || 0;
+        const price = product.price || product.discountedPrice || 0;
 
         const user = await users.findOne({ email: decoded.email });
         if (!user) {
@@ -41,13 +41,19 @@ export async function POST(req: NextRequest) {
         );
 
         if (existingIndex !== -1) {
-            cartItems[existingIndex].quantity += quantity;
-            cartItems[existingIndex].price = price; // Update price in case it changed
+
+            if ((cartItems[existingIndex].quantity + quantity) > product?.stock) {
+                return NextResponse.json({ success: false, message: 'Cannot add more than stock' }, { status: 200 });
+            }
+            else {
+                cartItems[existingIndex].quantity += quantity;
+                cartItems[existingIndex].price = price;
+            }
+
         } else {
             cartItems.push({ productId, quantity, selectedSize, price });
         }
 
-        // Recalculate totalAmount
         const totalAmount = cartItems.reduce((sum: any, item: any) => sum + (item.price * item.quantity), 0);
 
         const updateResult = await users.updateOne(

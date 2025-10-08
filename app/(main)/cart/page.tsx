@@ -21,13 +21,13 @@ const CartPage = () => {
     fetchCartItems();
   }, []);
 
-  const updateQuantity = async (productId: string, newQuantity: number, selectedSize: string) => {
+  const updateQuantity = async (productId: string, newQuantity: number, selectedSize: string, stock: number) => {
     if (newQuantity < 1) return;
 
     setUpdating(true);
     const res = await CommonApiCall('/api/cart/update', {
       method: 'POST',
-      data: { productId, quantity: newQuantity, selectedSize },
+      data: { productId, quantity: newQuantity, selectedSize, stock },
     });
 
     if (res?.success) {
@@ -39,7 +39,7 @@ const CartPage = () => {
         )
       );
     } else {
-      alert('Failed to update quantity');
+      alert(res.message);
     }
 
     setUpdating(false);
@@ -92,7 +92,6 @@ const CartPage = () => {
       <h1 className="text-2xl md:text-3xl font-extrabold mb-8 text-center md:text-left">Your Cart</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Cart Items */}
         <div className="md:col-span-2 space-y-6">
           {cartItems.map((item, index) => (
             <div
@@ -121,7 +120,7 @@ const CartPage = () => {
                 <div className="flex items-center gap-4 mt-2">
                   <button
                     disabled={updating}
-                    onClick={() => updateQuantity(item._id, item.quantity - 1, item.selectedSize)}
+                    onClick={() => updateQuantity(item._id, item.quantity - 1, item.selectedSize, parseInt(item?.stock))}
                     className="bg-gray-200 px-2 rounded hover:bg-gray-300 disabled:opacity-50 cursor-pointer"
                   >
                     −
@@ -129,7 +128,7 @@ const CartPage = () => {
                   <span className="text-sm">{item.quantity}</span>
                   <button
                     disabled={updating}
-                    onClick={() => updateQuantity(item._id, item.quantity + 1, item.selectedSize)}
+                    onClick={() => updateQuantity(item._id, item.quantity + 1, item.selectedSize, parseInt(item?.stock))}
                     className="bg-gray-200 px-2 rounded hover:bg-gray-300 disabled:opacity-50 cursor-pointer"
                   >
                     +

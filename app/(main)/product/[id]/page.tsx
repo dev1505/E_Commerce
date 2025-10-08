@@ -34,6 +34,11 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
     const handleAddToCart = async () => {
         if (!product) return;
 
+        if (quantity > product?.stock) {
+            alert("Cannot add more than stock");
+            return;
+        }
+
         const payload = {
             productId: product._id,
             quantity,
@@ -50,7 +55,7 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
         if (response.success) {
             alert(`${product.title} has been added to your cart!`);
         } else {
-            alert(`Error: ${response.message}`);
+            alert(`${response.message}`);
         }
     };
 
@@ -67,11 +72,17 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
         const renderCommonDetails = (p: AllCategories) => (
             <>
                 <p className="text-gray-500 text-sm">Brand: {p.brand}</p>
-                <p className="text-gray-500 text-sm">Stock: {p.stock}</p>
-                <div className="flex items-center mt-2">
-                    <span className="text-yellow-500">{'★'.repeat(Math.round(p.rating))}{'☆'.repeat(5 - Math.round(p.rating))}</span>
-                    <span className="text-gray-600 ml-2">({p.rating} stars)</span>
-                </div>
+                {p.stock ? <p className="text-gray-500 text-sm">Stock: {p.stock}</p> : (
+                    <div className='text-red-500'>
+                        Product is out of stock
+                    </div>
+                )}
+                {p?.rating &&
+                    <div className="flex items-center mt-2">
+                        <span className="text-yellow-500">{'★'.repeat(Math.round(p.rating))}{'☆'.repeat(5 - Math.round(p.rating))}</span>
+                        <span className="text-gray-600 ml-2">{p.rating} stars</span>
+                    </div>
+                }
             </>
         );
 
@@ -157,8 +168,8 @@ const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
                         <label htmlFor="quantity" className="font-semibold mr-4">Quantity:</label>
                         <div className="flex items-center">
                             <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="bg-gray-200 text-gray-700 hover:bg-gray-300 px-3 py-1 rounded-l">-</button>
-                            <input min={1} type="number" id="quantity" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} className="text-center w-12" />
-                            <button onClick={() => setQuantity(q => q + 1)} className="bg-gray-200 text-gray-700 hover:bg-gray-300 px-3 py-1 rounded-r">+</button>
+                            <input readOnly type="number" id="quantity" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} className="text-center w-12" />
+                            <button onClick={() => product?.stock > quantity && setQuantity(q => q + 1)} className="bg-gray-200 text-gray-700 hover:bg-gray-300 px-3 py-1 rounded-r">+</button>
                         </div>
                     </div>
                     {'size' in product && typeof (product.size) === 'object' && product.size && (

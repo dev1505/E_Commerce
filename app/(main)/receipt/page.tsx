@@ -46,7 +46,7 @@ export default async function ReceiptPage() {
                                 <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
                             </div>
                             <div className="text-right font-semibold whitespace-nowrap">
-                                ${(product.discountedPrice * item.quantity).toFixed(2)}
+                                ${(product.price * item.quantity).toFixed(2)}
                             </div>
                         </div>
                     );

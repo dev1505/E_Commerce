@@ -22,7 +22,8 @@ export async function userReceipt() {
 
         if (!user) return NextResponse.json({ success: false, message: 'User not found' });
 
-        // Move items to history if needed
+        const productsCollection = db.collection('productData');
+
         if (user.cartItems.length) {
             await usersCollection.updateOne(
                 { email: decoded.email },
@@ -31,16 +32,25 @@ export async function userReceipt() {
                     $push: { history: user.cartItems }
                 }
             );
-            user.history.push(user.cartItems); // Update local user object
+
+            user.cartItems.map(async (cartData: any) => {
+                const product = await productsCollection.findOneAndUpdate(
+                    { _id: new ObjectId(cartData?.productId) },
+                    { $inc: { stock: -cartData?.quantity } },
+                    { returnDocument: "after" }
+                );
+            })
+
+            user.history.push(user.cartItems);
             user.cartItems = [];
         }
-        const productsCollection = db.collection('productData');
+
         const latestHistory = user.history[user.history.length - 1] || [];
 
         const productData = await Promise.all(
-            latestHistory.map(async (item: any) =>
-                await productsCollection.findOne({ _id: new ObjectId(item.productId) })
-            )
+            latestHistory.map(async (item: any) => {
+                return await productsCollection.findOne({ _id: new ObjectId(item.productId) })
+            })
         );
 
         return NextResponse.json({
@@ -48,6 +58,7 @@ export async function userReceipt() {
             message: "Receipt",
             data: { user: user, productData: productData }
         });
+
     } catch (error) {
         console.error("getReceipt error:", error);
         return NextResponse.json({ success: false, message: 'Server error' });

@@ -22,22 +22,32 @@ export async function POST(req: NextRequest) {
         }
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as { email: string };
-        const { productId, quantity, selectedSize } = await req.json();
+        const { productId, quantity, selectedSize, stock } = await req.json();
+
         if (!productId || typeof quantity !== 'number' || quantity < 1 || typeof selectedSize === 'number') {
             return NextResponse.json(
                 { success: false, message: 'Invalid input' },
                 { status: 400 }
             );
         }
+
         const product = await findProductById(productId);
+
         if (!product) {
             return NextResponse.json(
                 { success: false, message: 'Product not found' },
                 { status: 404 }
             );
         }
+        console.log(stock, quantity)
+        if (stock < quantity) {
+            return NextResponse.json(
+                { success: false, message: 'No more stock available' },
+                { status: 200 }
+            );
+        }
 
-        const price = product.discountedPrice || product.price || 0;
+        const price = product.price || product.discountedPrice || 0;
         const totalPrice = price * quantity;
         const client = await clientPromise;
         const db = client.db('E_Commerce');

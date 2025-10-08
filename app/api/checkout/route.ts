@@ -18,7 +18,7 @@ export async function POST(req: Request) {
                 product_data: {
                     name: `${item.title}${item.selectedSize ? ` (Size: ${item.selectedSize})` : ''}`,
                 },
-                unit_amount: Math.round(item.discountedPrice * 100),
+                unit_amount: Math.round(item.price * 100),
             },
             quantity: item.quantity,
         }));
